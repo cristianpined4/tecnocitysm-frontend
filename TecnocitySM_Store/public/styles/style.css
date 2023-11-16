@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+}
+/*-----------------------------------------------------------------------------*/
+header{
+    width: 100%;
+    background-color: rgb(35, 47, 62);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>.opciones1{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+header>.opciones1> li {
+    height: auto;
+    list-style: none;
+    padding:10px;
+    border-right: solid 1px rgb(57, 68, 82);
+}
+
+header>.opciones1> li a {
+    color: azure;
+    padding:40px;
+    text-decoration-line: none;
+}
+
+header>.opciones1> li a:hover {
+    color: rgb(255, 60, 32);
+}
+/*-----------------------------------------------------------------------------*/
+.navbar{
+    background-color: rgb(35, 47, 62);
+    border-top: solid 2px rgb(57, 68, 82);
+}
+
+.navbar>.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 9rem;
+    height: 9rem;
+ }
+ 
+
+span{
+    padding:30px;
+}
+
+  .Buscador{
+    width: 35rem;
+    height: 3rem;
+  }
+
+  .busqueda{
+    width: 65px;
+    background-color:rgb(238, 92, 25) ;
+    border: none;
+  }
+.busqueda:hover{
+    background-color:rgb(255, 60, 32) ;
+}
+
+  .navbar-nav{
+    padding:30px;
+}
+/*-----------------------------------------------------------------------------*/
+.Categorias{
+    width: 100%;
+    background-color: rgb(35, 47, 62);
+    border-top: solid 1px rgb(57, 68, 82);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Categorias>.Opciones2{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.Categorias>.Opciones2> li {
+    height: auto;
+    list-style: none;
+    padding:10px;
+}
+
+.Categorias>.op> li {
+    height: auto;
+    list-style: none;
+    padding:10px;
+}
+
+.Categorias>.op> li a{
+    height: auto;
+    list-style: none;
+    padding:10px;
+}
+
+.Categorias>.op> .nav-item .nav-link{
+    color: white;
+}
+
+.Categorias>.op> .nav-item .nav-link:hover{
+    color: rgb(255, 60, 32);
+}
+.Categorias>.Opciones2> li a {
+    color: azure;
+    padding:40px;
+    text-decoration-line: none;
+}
+
+.Categorias>.Opciones2> li a:hover{
+    color: rgb(255, 60, 32);
+}
+
+/*-----------------------------------------------------------------------------*/
+/*Parte donde se muestra las imagenes*/
+footer {
+    width: 100%;
+    color: azure;
+    background-color: #1b262c;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.slide{
+    margin-top: 20px;
+    width: 44rem;
+    margin-left: 6rem;
+}
+
+.slide img{
+    height: 27rem;  
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.productos{
+    margin-top: 20px;
+    margin-left: 1rem;
+}
+
+.productos .product{
+    padding: 6px;
+    height: 9rem;
+    width: 20rem;
+}
+/*-----------------------------------------------------------------------------*/
+/*Parte donde se muestra info*/
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container2> .info{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.container2>.info> li {
+    height: auto;
+    list-style: none;
+    padding:30px;
+}
+
+.container2>.info> li> i{
+  color: rgb(255, 60, 32);
+  font-size: 2rem;
+}
+
+ .info2{
+
+    font-size: 11px;
+  }
