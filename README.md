@@ -1,5 +1,5 @@
 # tecnocitysm
-##Frontend
+#Frontend
 
-![Logo](![tecnocity](https://github.com/cristianpined4/tecnocitysm-frontend/assets/102541759/78316a99-ca12-4b54-bd52-98d00bc00b83)
-)
+![tecnocity](https://github.com/cristianpined4/tecnocitysm-frontend/assets/102541759/30a217e7-b4d7-4864-a4c4-3924fe601479)
+
