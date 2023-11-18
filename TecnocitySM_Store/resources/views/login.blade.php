@@ -23,7 +23,7 @@
                     <hr>
                     <div class="pie-form">
                         <a href="#">¿Perdiste tu contraseña?</a>
-                        <a href="#">¿No tienes Cuenta? Registrate</a>
+                        <a href="http://localhost:8000/register">¿No tienes Cuenta? Registrate</a>
                         <hr>
                         <a href="http://localhost:8000/">« Volver</a>
                     </div>

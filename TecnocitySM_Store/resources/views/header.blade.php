@@ -30,7 +30,7 @@
                <button class="busqueda btn btn-outline-secondary text-light" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
            </form>
                <ul class="navbar-nav">
-                    <li><a class="nav-link active text-light" aria-current="page" href="#"><i class="fa-solid fa-mobile-screen-button"></i> Registrarse</a></li>
+                    <li><a class="nav-link active text-light" aria-current="page" href="http://localhost:8000/register"><i class="fa-solid fa-mobile-screen-button"></i> Registrarse</a></li>
                     <li><a class="nav-link active text-light" aria-current="page" href="http://localhost:8000/login"><i class="fa-solid fa-arrow-right-from-bracket"></i> Acceder</a></li>
                 </ul>
            </div>
