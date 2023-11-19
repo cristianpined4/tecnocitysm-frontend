@@ -1,5 +1,8 @@
-<!--Incluimos el header-->
- @include('header')
+<!--Incluimos el header y footer del layout-->
+@extends('layouts.layout')
+
+{{-- Agregamos un section para poder trabajar con layout --}}
+@section('content')
 
  <!--Contenido de la pagina-->
  <div class="container">
@@ -41,6 +44,113 @@
     </ul>
  </div>
 <br>
- <!--Incluimos el footerr-->
- @include('footer')
 
+
+
+<div class="container3">
+<h3><i class="fa-solid fa-magnifying-glass"></i> Las más buscadas</h3>
+<hr>
+    <div class="slider-marcas">
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca1.png') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca2.jpg') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca3.png') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca4.png') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca5.jpg') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca6.png') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca7.jpg') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca1.png') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca2.jpg') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca3.png') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca4.png') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca5.jpg') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca6.png') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/marca7.jpg') }}" alt="imagen">
+        </div>
+    </div>
+    <br>
+
+    <h3> Ofertas Especiales</h3>
+    <div class="ofertas">
+           <div class="ofertas-img">
+           <img  src="{{ asset('IMG/productos.png') }}" alt="imagen">
+           </div>
+           <div class="ofertas-img">
+           <img src="{{ asset('IMG/Productos2.png') }}" alt="imagen">
+           </div>
+           <div class="ofertas-img">
+           <img  src="{{ asset('IMG/Productos3.png') }}" alt="imagen">
+           </div>
+           <div class="ofertas-img">
+             <img src="{{ asset('IMG/Imagen2.jpg') }}" alt="">
+           </div>
+           <div class="ofertas-img">
+             <img src="{{ asset('IMG/Imagen3.png') }}" alt="">
+           </div>
+       </div>
+       <hr>
+
+       <h3>Más Vendido</h3>
+       <div class="ventas">
+       <div class="ventas-img">
+           <img  src="{{ asset('IMG/productos.png') }}" alt="imagen">
+           </div>
+           <div class="ventas-img">
+           <img src="{{ asset('IMG/Productos2.png') }}" alt="imagen">
+           </div>
+           <div class="ventas-img">
+           <img  src="{{ asset('IMG/Productos3.png') }}" alt="imagen">
+           </div>
+           <div class="ventas-img">
+             <img src="{{ asset('IMG/Imagen2.jpg') }}" alt="">
+           </div>
+           <div class="ventas-img">
+             <img src="{{ asset('IMG/Imagen3.png') }}" alt="">
+           </div>
+        </div>
+
+       </div>
+       <br>
+
+</div>
+
+@endsection
