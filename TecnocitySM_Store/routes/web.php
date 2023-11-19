@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,7 @@ Route::get('/', function () {
 Route::get('/login',[LoginController::class,'index']);
 
 Route::get('/register',[RegisterController::class, 'index']);
+
+Route::get('/inicio', function () {
+    return view('inicio');
+});

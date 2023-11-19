@@ -1,8 +1,10 @@
-<!--Incluimos el header-->
-@include('header')
+<!--Incluimos el header y footer del layout-->
+@extends('layouts.layout')
+
+@section('content')
 <link rel="stylesheet" href="{{ asset('styles/register.css') }}">
         <div id="contenedor">
-            
+
             <div id="contenedorcentrado">
                 <div id="register">
                     <form action="#" method="post">
@@ -37,6 +39,4 @@
                 </div>
             </div>
         </div>
-        
- <!--Incluimos el footerr-->
- @include('footer')
+        @endsection
