@@ -162,6 +162,11 @@ body {
     width: 60%;
 }
 
+.logo2{
+    width: 13rem;
+    height: 13rem;
+}
+
 hr {
     border-top: 1px solid #8c8b8b;
 	border-bottom: 1px solid #dfcdc3;
@@ -176,12 +181,14 @@ hr {
 .pie-form a {
     display: block;
     text-decoration: none;
-    color: #dfcdc3;
+    color:#fff ;
     margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .pie-form a:hover {
-    color: #719192;
+    color: rgb(238, 92, 25);
 }
 /* seccion de la derecha */
 /* seccion de la derecha */

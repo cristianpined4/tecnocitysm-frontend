@@ -21,6 +21,7 @@
                 </div>
            </div>
        </div>
+
        <div class="productos">
            <div class="imagenes">
            <img class="product" src="{{ asset('IMG/productos.png') }}" alt="imagen">
@@ -107,6 +108,7 @@
            <img  src="{{ asset('IMG/marca7.jpg') }}" alt="imagen">
         </div>
     </div>
+    <hr>
     <br>
 
     <h3> Ofertas Especiales</h3>
@@ -131,7 +133,7 @@
 
        <h3>Más Vendido</h3>
        <div class="ventas">
-       <div class="ventas-img">
+           <div class="ventas-img">
            <img  src="{{ asset('IMG/productos.png') }}" alt="imagen">
            </div>
            <div class="ventas-img">

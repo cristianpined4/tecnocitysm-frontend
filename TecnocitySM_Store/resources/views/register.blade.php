@@ -32,7 +32,7 @@
                     </div>
                     <hr>
                     <div class="pie-form">
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis sed eos dolorum nostrum labore veniam quod perferendis! Aliquam qui suscipit debitis nemo in harum porro, ducimus saepe, vero alias reiciendis?</p>
+                      <img class="logo2" src="{{ asset('IMG/Logo.png') }}" alt="imagen">
                         <hr>
                         <a href="http://localhost:8000/">« Volver</a>
                     </div>

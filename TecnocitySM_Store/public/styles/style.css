@@ -50,7 +50,6 @@ header>.opciones1> li a:hover {
     height: 9rem;
  }
 
-
 span{
     padding:30px;
 }
@@ -189,7 +188,6 @@ footer {
 }
 
  .info2{
-
     font-size: 11px;
   }
 
@@ -245,8 +243,8 @@ footer {
   }
 
   .ofertas .ofertas-img img{
-    width: 18rem;
-    height: 12rem;
+    width: 16rem;
+    height: 10rem;
   }
 
   .ventas{
@@ -259,8 +257,8 @@ footer {
   }
 
   .ventas .ventas-img img{
-    width: 18rem;
-    height: 12rem;
+    width: 16rem;
+    height: 10rem;
   }
 
   @keyframes scroll{
