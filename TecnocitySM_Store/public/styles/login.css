@@ -177,12 +177,13 @@ hr {
 .pie-form a {
     display: block;
     text-decoration: none;
-    color: #dfcdc3;
+    color: #fff;
     margin-bottom: 3px;
+    font-size: 16px;
 }
 
 .pie-form a:hover {
-    color: #719192;
+    color: rgb(238, 92, 25);
 }
 /* seccion de la derecha */
 /* seccion de la derecha */

@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('styles/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Responsive.css') }}">
     <title>TecnoCitySM</title>
 </head>
 <body>
            <!--Parte del header y navbar de Inicio,Login,Registro-->
-           <header>
+    <header>
         <ul class="opciones1">
             <li><a href=""><i class="fa-solid fa-users"></i></i> Nosotros</a></li>
             <li><a href=""><i class="fa-solid fa-headset"></i> Centro de ayuda</a></li>
