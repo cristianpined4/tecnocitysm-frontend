@@ -24,6 +24,11 @@ Route::get('/login',[LoginController::class,'index']);
 
 Route::get('/register',[RegisterController::class, 'index']);
 
+Route::post('/registro', [LoginController::class,'index'])->name('registro');
+
 Route::get('/inicio', function () {
     return view('inicio');
 });
+Route::post('/inicio', function () {
+    return view('inicio');
+})->name("traslado");

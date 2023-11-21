@@ -7,14 +7,15 @@
 
             <div id="contenedorcentrado">
                 <div id="login">
-                    <form id="loginform" method="POST" >
+                    <form action="{{ route('traslado') }}" id="loginform" method="POST" >
+                    @csrf
                         <label for="usuario">Usuario</label>
                         <input id="usuario" type="text" name="usuario" placeholder="Usuario" required>
 
                         <label for="password">Contraseña</label>
                         <input id="password" type="password" placeholder="Contraseña" name="password" required>
 
-                        <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                        <button type="button" title="Ingresar" name="Ingresar" id="Ingresar">Login</button>
                     </form>
 
                 </div>
@@ -25,11 +26,13 @@
                     <hr>
                     <div class="pie-form">
                         <a href="#">¿Perdiste tu contraseña?</a>
-                        <a href="http://localhost:8000/register">¿No tienes Cuenta? Registrate</a>
+                        <a href="http://localhost:8001/register">¿No tienes Cuenta? Registrate</a>
                         <hr>
-                        <a href="http://localhost:8000/">« Volver</a>
+                        <a href="http://localhost:8001/">« Volver</a>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="{{ asset('js/login.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         @endsection
