@@ -7,7 +7,8 @@
 
             <div id="contenedorcentrado">
                 <div id="register">
-                    <form action="#" method="post">
+                    <form action="{{ route('registro') }}" method="post">
+                    @csrf
                       <label for="nombre">Nombre:</label>
                       <input type="text" id="nombre" name="nombre" required>
 
@@ -23,7 +24,7 @@
                       <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>
                       <br><br>
 
-                      <button type="submit">Registrarse</button>
+                      <button type="submit" id="registro">Registrarse</button>
                     </form>
                 </div>
                 <div id="derecho">
@@ -34,9 +35,11 @@
                     <div class="pie-form">
                       <img class="logo2" src="{{ asset('IMG/Logo.png') }}" alt="imagen">
                         <hr>
-                        <a href="http://localhost:8000/">« Volver</a>
+                        <a href="http://localhost:8001/">« Volver</a>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="{{ asset('js/registro.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         @endsection

@@ -31,8 +31,8 @@
                <button class="busqueda btn btn-outline-secondary text-light" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
            </form>
                <ul class="navbar-nav">
-                    <li><a class="nav-link active text-light" aria-current="page" href="http://localhost:8000/register"><i class="fa-solid fa-mobile-screen-button"></i> Registrarse</a></li>
-                    <li><a class="nav-link active text-light" aria-current="page" href="http://localhost:8000/login"><i class="fa-solid fa-arrow-right-from-bracket"></i> Acceder</a></li>
+                    <li><a class="nav-link active text-light" aria-current="page" href="http://localhost:8001/register"><i class="fa-solid fa-mobile-screen-button"></i> Registrarse</a></li>
+                    <li><a class="nav-link active text-light" aria-current="page" href="http://localhost:8001/login"><i class="fa-solid fa-arrow-right-from-bracket"></i> Acceder</a></li>
                 </ul>
            </div>
         </div>
@@ -74,5 +74,7 @@
     <footer>
      <h3>TecnoCitySM</h3>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
