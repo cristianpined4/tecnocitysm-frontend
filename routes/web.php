@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\FormMarcaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MarcaController;
+use App\Http\Controllers\OfertaController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashBoardController;
 use App\Http\Controllers\OfertasController;
@@ -43,3 +47,9 @@ Route::post('/inicio', function () {
 Route::get('/dashboard',[DashBoardController::class,'index']);
 Route::resource('user',UserController::class);
 Route::resource('productos',ProductsController::class);
+Route::resource('categoria',CategoriaController::class);
+Route::resource('marcas',MarcaController::class);
+Route::get('/formMarca',[FormMarcaController::class,'index']);
+Route::resource('oferta',OfertaController::class);
+Route::get('/profile', [UserController::class,'index'])->name('profile');
+Route::post('/update', [LoginController::class,'update'])->name('actualizar');
