@@ -31,7 +31,8 @@ Route::post('/registro', [LoginController::class,'index'])->name('registro');
 
 Route::get('/inicio', function () {
     return view('inicio');
-});
+})->name("inicio");
+
 Route::post('/inicio', function () {
     return view('inicio');
 })->name("traslado");
