@@ -121,3 +121,27 @@
 .container-user> h1{
     color: rgb(35, 47, 62);
 }
+
+.btn-info> a{
+    text-decoration: none;
+    color: black;
+}
+
+.cabezera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.cabezera> button{
+    margin-left: 60rem;
+    float: right;
+    width: 5.4rem;
+    height: 2.5rem;
+}
+
+.ofertas{
+    margin-left: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
