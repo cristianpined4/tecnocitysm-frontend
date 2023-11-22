@@ -14,7 +14,7 @@
            <!--Parte del header y navbar de Inicio,Login,Registro-->
     <header>
         <ul class="opciones1">
-            <li><a href=""><i class="fa-solid fa-users"></i></i> Nosotros</a></li>
+            <li><a href="http://localhost:8001/nosotros"><i class="fa-solid fa-users"></i></i> Nosotros</a></li>
             <li><a href=""><i class="fa-solid fa-headset"></i> Centro de ayuda</a></li>
             <li><a href=""><i class="fa-solid fa-cart-shopping"></i> Ver carretilla</a></li>
             <li><a href=""><i class="fa-solid fa-money-bill"></i> Pagar</a></li>
@@ -31,8 +31,9 @@
                <button class="busqueda btn btn-outline-secondary text-light" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
            </form>
                <ul class="navbar-nav">
-                    <li><a class="nav-link active text-light" aria-current="page" href="http://localhost:8001/register"><i class="fa-solid fa-mobile-screen-button"></i> Registrarse</a></li>
-                    <li><a class="nav-link active text-light" aria-current="page" href="http://localhost:8001/login"><i class="fa-solid fa-arrow-right-from-bracket"></i> Acceder</a></li>
+                    <li><a id="registrar" class="nav-link active text-light" aria-current="page" href="http://localhost:8001/register"><i class="fa-solid fa-mobile-screen-button"></i> Registrarse</a></li>
+                    <li><a id="acceder" class="nav-link active text-light" aria-current="page" href="http://localhost:8001/login"><i class="fa-solid fa-arrow-right-from-bracket"></i> Acceder</a></li>
+                    <li><a id="salir" class="nav-link active text-light d-none" aria-current="page" href="http://localhost:8001/"><i class="fa fa-sign-out"></i>Salir</a></li>
                 </ul>
            </div>
         </div>
@@ -76,5 +77,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('js/actividad.js') }}"></script>
 </body>
 </html>

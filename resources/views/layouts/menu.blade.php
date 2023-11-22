@@ -67,7 +67,7 @@
             </div>
 
             <div class="op">
-                <i class="fa-solid fa-right-from-bracket"></i>
+            <a href="" id="exit" type="button"><i class="fa-solid fa-right-from-bracket"></i></a>
                 <span>Salir</span>
             </div>
 

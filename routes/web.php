@@ -43,6 +43,9 @@ Route::get('/inicio', function () {
 Route::post('/inicio', function () {
     return view('inicio');
 })->name("traslado");
+Route::get('/nosotros', function () {
+    return view('nosotros');
+});
 
 Route::get('/dashboard',[DashBoardController::class,'index']);
 Route::resource('user',UserController::class);
