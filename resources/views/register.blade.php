@@ -24,7 +24,7 @@
                       <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>
                       <br><br>
 
-                      <button type="submit" id="registro">Registrarse</button>
+                      <button type="button" id="registro">Registrarse</button>
                     </form>
                 </div>
                 <div id="derecho">

@@ -23,6 +23,11 @@ return new class extends Migration
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();
         });
+
+        //Para el CRUD
+        Schema::create('task', function(Blueprint $table){
+
+        });
     }
 
     /**

@@ -20,6 +20,7 @@ if (localStorage.getItem('token') !== null) {
         .then(data => {
           // Manipular los datos de respuesta aquí
           console.log(data);
+          window.alert("Seseion ya iniciada como -> "+JSON.stringify(data.name))
           window.location.href="http://localhost:8001/inicio";
         })
         .catch(error => {
