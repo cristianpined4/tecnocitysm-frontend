@@ -32,9 +32,9 @@
                 </span>
             </div>
 
-            <div class="{{ 'user' ==Request::is('user*')?'active':'' }}">
+            <div class="{{ 'usuarios' ==Request::is('usarios*')?'active':'' }}">
                <i class="fa-solid fa-users"></i>
-               <span class="opcion"><a href="{{ route('user.index') }}"> Usuarios</a></span>
+               <span class="opcion"><a href="{{ route('usuarios.index') }}"> Usuarios</a></span>
             </div>
 
             <div class="{{ 'productos' ==Request::is('productos*')?'active':'' }}">

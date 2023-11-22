@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashBoardController;
 use App\Http\Controllers\OfertasController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -48,7 +49,7 @@ Route::get('/nosotros', function () {
 });
 
 Route::get('/dashboard',[DashBoardController::class,'index']);
-Route::resource('user',UserController::class);
+Route::resource('usuarios',UsuariosController::class);
 Route::resource('productos',ProductsController::class);
 Route::resource('categoria',CategoriaController::class);
 Route::resource('marcas',MarcaController::class);
