@@ -1,0 +1,27 @@
+header{
+    width: 100%;
+    background-color: rgb(35, 47, 62);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>.opciones1{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+header>.opciones1> li {
+    height: auto;
+    list-style: none;
+    padding:10px;
+}
+
+header>.opciones1> li a {
+    color: azure;
+    padding:40px;
+    text-decoration-line: none;
+    font-weight: bold;
+}
