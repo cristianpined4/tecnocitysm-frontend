@@ -1,15 +1,49 @@
 const registro = document.getElementById("registro");
 
+const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+const validateName = (name) => {
+    const re = /^[a-zA-Z ]{2,30}$/;
+    return re.test(name);
+}
+
 registro.addEventListener("click", () =>{
     const name = document.getElementById("nombre");
     const apellido = document.getElementById("apellido");
-    const nombreComleto = name.value + ' '+ apellido.value;
+    const nombreCompleto = name.value + ' '+ apellido.value;
     const correo = document.getElementById("email");
     const passwordF = document.getElementById("password");
     const passwordS = document.getElementById("confirmar_contrasena");
 
+    if(name.value === "" || apellido.value === ""){
+        window.alert("Ingrese su nombre completo");
+        return;
+    }
+
+    if(!validateName(name.value) || !validateName(apellido.value)){
+        window.alert("Ingrese un nombre válido");
+        name.value = "";
+        apellido.value = "";
+        return;
+    }
+
+    if(correo.value === ""){
+        window.alert("Ingrese su correo");
+        return;
+    }
+    if(!validateEmail(correo.value)){
+        window.alert("Ingrese un correo válido");
+        correo.value = "";
+        return;
+    }
+
     if(passwordF.value !== passwordS.value){
         window.alert("Las contraseñas no coinciden");
+        passwordF.value = "";
+        passwordS.value = "";
         return;
     }
 
@@ -27,7 +61,7 @@ registro.addEventListener("click", () =>{
 
     console.log("Realizando petición...");
     const formData = new FormData();
-    formData.append('name',nombreComleto);
+    formData.append('name',nombreCompleto);
     formData.append('email',correo.value);
     formData.append('password',passwordF.value);
     fetch('http://localhost:8000/api/auth/signup',{
