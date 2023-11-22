@@ -25,3 +25,7 @@ header>.opciones1> li a {
     text-decoration-line: none;
     font-weight: bold;
 }
+
+body{
+    background-color: rgb(35, 47, 62);
+}

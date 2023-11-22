@@ -1,0 +1,67 @@
+.custom-input {
+    border-radius: 0; /* Quitar las esquinas redondeadas */
+    border-width: 0 0 2px 0; /* Establecer solo el borde inferior */
+    border-color: #ced4da; /* Color del borde */
+    background-color: transparent; /* Fondo transparente */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del contenedor */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del select */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    appearance: none; /* Para quitar las flechas del select en algunos navegadores */
+    background-color: #ffffff;
+    background-image: linear-gradient(45deg, transparent 50%, #ced4da 50%), linear-gradient(135deg, #ced4da 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* Estilo cuando el select está enfocado */
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo del input de tipo file */
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Cambiar el estilo del contenedor cuando se selecciona un archivo */
+input[type="file"]:focus + .custom-file-upload {
+    border-color: #0056b3;
+}
+
+.estiloPropio {
+    background-color: transparent;
+}
