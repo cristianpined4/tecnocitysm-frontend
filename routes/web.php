@@ -30,8 +30,6 @@ Route::get('/register',[RegisterController::class, 'index']);
 
 Route::post('/registro', [LoginController::class,'index'])->name('registro');
 
-Route::post('/update', [LoginController::class,'update'])->name('actualizar');
-
 Route::get('/ofertas',[OfertasController::class,'index']);
 
 Route::get('/inicio', function () {
@@ -45,4 +43,3 @@ Route::post('/inicio', function () {
 Route::get('/dashboard',[DashBoardController::class,'index']);
 Route::resource('user',UserController::class);
 Route::resource('productos',ProductsController::class);
-Route::get('/profile', [UserController::class,'index'])->name('profile');

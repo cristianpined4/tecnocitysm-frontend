@@ -43,13 +43,18 @@
             </div>
 
             <div>
-               <i class="fa-solid fa-plus"></i>
-               <span class="opcion"><a href="">Nuevos Productos</a></span>
+               <i class="fa-solid fa-bars"> </i>
+               <span class="opcion"><a href="{{ route('categoria.index')}}">Categorias</a></span>
+            </div>
+
+            <div>
+               <i class="fa-solid fa-tag"></i>
+               <span class="opcion"><a href="{{ route('marcas.index')}}"> Marcas </a></span>
             </div>
 
             <div>
                 <i class="fa-brands fa-shopify"></i>
-                <span class="opcion"><a href="">Ofertas</a></span>
+                <span class="opcion"><a href="{{ route('oferta.index')}}">Ofertas</a></span>
             </div>
         </div>
     </nav>
