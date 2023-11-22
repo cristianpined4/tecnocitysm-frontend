@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashBoardController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -32,3 +35,7 @@ Route::get('/inicio', function () {
 Route::post('/inicio', function () {
     return view('inicio');
 })->name("traslado");
+
+Route::get('/dashboard',[DashBoardController::class,'index']);
+Route::resource('user',UserController::class);
+Route::resource('productos',ProductsController::class);
