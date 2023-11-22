@@ -30,6 +30,8 @@ Route::get('/register',[RegisterController::class, 'index']);
 
 Route::post('/registro', [LoginController::class,'index'])->name('registro');
 
+Route::post('/update', [LoginController::class,'update'])->name('actualizar');
+
 Route::get('/ofertas',[OfertasController::class,'index']);
 
 Route::get('/inicio', function () {

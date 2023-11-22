@@ -1,3 +1,8 @@
+/*
+*   Obtener los datos del usuario logueado
+*   y mostrarlos en el formulario
+* */
+
 if(localStorage.getItem("token") !== null){
 
     const token = localStorage.getItem('token').slice(1, -1);
@@ -5,6 +10,7 @@ if(localStorage.getItem("token") !== null){
     const txtUsernameField = document.getElementById("username");
     const txtEmailField = document.getElementById("email");
 
+    // Configurar las opciones de la solicitud Fetch
     const requestOptions = {
         method: 'GET',
         headers: {
