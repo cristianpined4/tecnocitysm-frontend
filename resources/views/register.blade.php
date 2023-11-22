@@ -21,6 +21,7 @@
                       <label for="password">Contraseña:</label>
                       <input type="password" id="password" name="password" required>
                       <label for="confirmar_contrasena">Confirmar Contraseña:</label>
+
                       <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>
                       <br><br>
 
