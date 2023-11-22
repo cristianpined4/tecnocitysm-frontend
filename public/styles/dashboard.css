@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*------------------------------------------*/
+/*NAVBAR VERTICAL*/
+/*------------------------------------------*/
+.menu{
+    background-color: rgb(35, 47, 62);
+    height: 100vh;
+    width: 300px;
+    color: #fff;
+    position: fixed;
+    padding: 12px;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.logo > img{
+    width: 10rem;
+    height: 5rem;
+}
+/*------------------------------------------*/
+.head > i{
+   font-size: 32px;
+   cursor: pointer;
+}
+.head> i:hover{
+    color:rgb(238, 92, 25) ;
+}
+/*------------------------------------------*/
+.opciones>div{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.opciones>div:hover{
+    background-color: rgb(238, 92, 25);
+    border-radius: 4px;
+    transition: all .4s ease-in-out;
+}
+/*------------------------------------------*/
+.opciones>div> i{
+    font-size:18px ;
+    margin-right: 8px;
+}
+
+.opcion > a{
+    text-decoration: none;
+    color: white;
+}
+/*------------------------------------------*/
+/*Para caundo se cierra el menu*/
+.menu.activado{
+    width: 70px;
+    transition: all .4s ease;
+}
+
+.menu.activado .opcion,
+.menu.activado .logo{
+    display: none;
+}
+
+.menu.activado .head i{
+    margin: auto;
+}
+
+/*------------------------------------------*/
+/*NAVBAR HORIZONTAL*/
+/*------------------------------------------*/
+.menu-horizontal {
+    background-color: rgb(229, 231, 233);
+    height: 3.5rem;
+}
+
+.menu-horizontal> .op{
+    padding: 12px;
+    float: right;
+    font-size: 20px;
+    color: rgb(88, 87, 87);
+}
+
+.container{
+    padding-top: 20px;
+    padding-left: 8rem;
+}
+
+.container> .row{
+    padding: 10px;
+    margin-left: 4rem;
+}
+/*------------------------------------------*/
+/*Estilos principal-dashboard*/
+
+.card{
+    width: 16rem;
+}
+
+.card-body{
+    cursor: pointer;
+}
+
+.iconos i{
+    font-size: 30px;
+}
+/*------------------------------------------*/
+.container-user{
+    width: 140vh;
+}
+.container-user> h1{
+    color: rgb(35, 47, 62);
+}
