@@ -8,9 +8,9 @@ if (localStorage.getItem('token') !== null) {
         'Authorization': `Bearer ${token}`
       }
     };
-    
+
     // Realizar la solicitud Fetch
-    fetch('http://localhost:8000/api/auth/current-user', requestOptions)
+    fetch('http://localhost:8000/api/auth/profile', requestOptions)
       .then(response => {
         if (!response.ok) {
           throw new Error(`Error: ${response.status}`);
@@ -27,7 +27,7 @@ if (localStorage.getItem('token') !== null) {
         else{
           window.location.href="http://localhost:8001/inicio";
         }
-        
+
       })
       .catch(error => {
         // Manejar errores de la solicitud

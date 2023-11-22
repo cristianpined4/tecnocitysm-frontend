@@ -56,4 +56,4 @@ Route::resource('marcas',MarcaController::class);
 Route::get('/formMarca',[FormMarcaController::class,'index']);
 Route::resource('oferta',OfertaController::class);
 Route::get('/profile', [UserController::class,'index'])->name('profile');
-Route::post('/update', [LoginController::class,'update'])->name('actualizar');
+Route::post('/update', [UserController::class,'update'])->name('actualizar');

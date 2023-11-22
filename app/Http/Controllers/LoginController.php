@@ -10,6 +10,6 @@ class LoginController extends Controller{
     }
 
     public function update(){
-        return view("login");
+//        return view("login");
     }
 }

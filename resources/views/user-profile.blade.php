@@ -6,7 +6,7 @@
     <div id="contenedor">
         <div id="contenedorcentrado">
             <div id="register">
-                <form action="{{ route('actualizar') }}" method="post">
+                <form action="{{ route('actualizar') }}" @method("POST")>
                     @csrf
                     <label for="nombre">Nombre completo:</label>
                     <input type="text" id="nombre" name="nombre" required>
