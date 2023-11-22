@@ -2,6 +2,10 @@
 *   Obtener los datos del usuario logueado
 *   y mostrarlos en el formulario
 * */
+const currentPassword = document.getElementById('currentPassword')
+
+// Obtener los datos del usuario logueado
+const password = currentPassword.value;
 
 if(localStorage.getItem("token") !== null){
 
@@ -36,7 +40,4 @@ if(localStorage.getItem("token") !== null){
             // Manejar errores de la solicitud
             console.error('Error de la solicitud:', error);
         });
-
-}else{
-    window.location.href="http://localhost:8001/login/";
 }

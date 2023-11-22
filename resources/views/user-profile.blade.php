@@ -27,7 +27,7 @@
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
                     <br><br>
 
-                    <button type="button" id="btnUpdate">Actualizar datos</button>
+                    <button type="submit" id="btnUpdate">Actualizar datos</button>
                 </form>
             </div>
             <div id="derecho">
@@ -44,6 +44,5 @@
         </div>
     </div>
     <script src="{{ asset('js/user-profile.js') }}"></script>
-    <script src="{{ asset('js/update.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 @endsection
