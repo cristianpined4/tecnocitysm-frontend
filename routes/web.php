@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashBoardController;
+use App\Http\Controllers\OfertasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,8 @@ Route::get('/login',[LoginController::class,'index']);
 Route::get('/register',[RegisterController::class, 'index']);
 
 Route::post('/registro', [LoginController::class,'index'])->name('registro');
+
+Route::get('/ofertas',[OfertasController::class,'index']);
 
 Route::get('/inicio', function () {
     return view('inicio');
