@@ -40,3 +40,4 @@ Route::post('/inicio', function () {
 Route::get('/dashboard',[DashBoardController::class,'index']);
 Route::resource('user',UserController::class);
 Route::resource('productos',ProductsController::class);
+Route::get('/profile', [UserController::class,'index'])->name('profile');

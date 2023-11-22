@@ -2,14 +2,14 @@
 @extends('layouts.layout')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('styles/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/login.css') }}">
         <div id="contenedor">
 
             <div id="contenedorcentrado">
                 <div id="login">
                     <form action="{{ route('traslado') }}" id="loginform" method="POST" >
                     @csrf
-                        <label for="usuario">Usuario</label>
+                        <label for="usuario">Correo electrónico</label>
                         <input id="usuario" type="text" name="usuario" placeholder="Usuario" required>
 
                         <label for="password">Contraseña</label>
@@ -35,4 +35,4 @@
         </div>
         <script src="{{ asset('js/login.js') }}"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        @endsection
+@endsection

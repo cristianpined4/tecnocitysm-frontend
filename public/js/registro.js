@@ -3,16 +3,16 @@ const registro = document.getElementById("registro");
 registro.addEventListener("click", () =>{
     const name = document.getElementById("nombre");
     const apellido = document.getElementById("apellido");
-    const nombreComleto = name.value + ' '+ apellido.value;
+    const nombreCompleto = name.value + ' '+ apellido.value;
     const correo = document.getElementById("email");
-    const contraseñaF = document.getElementById("password");
-    const contraseñaS = document.getElementById("confirmar_contrasena");
-    if (contraseñaF.value == contraseñaS.value) {
+    const passwordF = document.getElementById("password");
+    const passwordS = document.getElementById("confirmar_contrasena");
+    if (passwordF.value === passwordS.value) {
         console.log("realizando peticion");
         const formData = new FormData();
-        formData.append('name',nombreComleto);
+        formData.append('name',nombreCompleto);
         formData.append('email',correo.value);
-        formData.append('password',contraseñaF.value);
+        formData.append('password',passwordF.value);
         fetch('http://localhost:8000/api/auth/signup',{
             method:'POST',
             body: formData

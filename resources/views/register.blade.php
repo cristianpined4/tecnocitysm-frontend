@@ -2,7 +2,7 @@
 @extends('layouts.layout')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('styles/register.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/register.css') }}">
         <div id="contenedor">
 
             <div id="contenedorcentrado">
@@ -42,4 +42,4 @@
         </div>
         <script src="{{ asset('js/registro.js') }}"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        @endsection
+@endsection
