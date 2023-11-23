@@ -68,3 +68,7 @@ Route::get('/componentes', [ComponentesController::class, 'index']);
 Route::get('/dashboard/categorias/formCategoria', function () {
     return view('Forms.formCategorias');
 });
+
+Route::get('/dashboard/categorias/formCategoria/{id}', function () {
+    return view('Forms.formCategorias');
+});

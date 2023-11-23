@@ -1,9 +1,15 @@
 @extends('layouts.navbar2')
 
+@section('title', 'Crear Categoria')
+
+@section('css')
+<link rel="stylesheet" href="{{ asset('styles/formCategorias.css') }}">
+@endsection
+
 @section('content')
 <div class="container">
     <h2>Crear Categoria</h2>
-    <form id="formCategotias my-2">
+    <form id="formCategorias" class="my-2">
         <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" placeholder="Nombre" class="form-control" id="nombre">
@@ -13,10 +19,15 @@
             <input type="text" name="descripcion" placeholder="Descripcion" class="form-control" id="descripcion">
         </div>
         <div class="form-group my-2">
+            <label for="imagen">Imagen</label>
+            <input type="file" name="imagen" placeholder="Imagen" class="form-control-file" id="imagen"
+                accept="image/*">
+        </div>
+        <div class="form-group my-2">
             <label for="status">Estatus</label>
             <select name="status" id="status" class="form-control">
-                <option value="1">Activo</option>
-                <option value="0">Inactivo</option>
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>
