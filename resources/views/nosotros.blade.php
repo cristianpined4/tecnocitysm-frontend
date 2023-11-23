@@ -13,7 +13,7 @@
             <h3>Busca, Escoje, Compra Fácil y rápido!</h3>
             <p>En nuestra webstore ponemos a disposición cientos de productos tecnológicos de fácil ubicación para ahorrarte tiempo. Un proceso de pago asistido de fácil comprensión para que tu experiencia de compra sea fácil y rápida. Además de ofrecerte novedades de productos cada semana y oportunidades de ofertas especiales de la semana o del mes.</p>
         </div>
-        
+
         <div style="padding: 20px 20px 20px 60px">
             <h3>Marcas, categorias ...!</h3>
             <ul>
@@ -28,8 +28,10 @@
         </div>
     </div>
     <div>
-        <h1 class="text-center">Colaboradores</h1>
+        <br>
         <div class="colaboradoresContenedor">
+        <span></span><h1 class="text-center">Colaboradores</h1><span></span>
+        <hr><hr><hr>
             <div class="text-center">
                 <img src="{{ asset('IMG/imgFrontend.png') }}" alt="programador Backend" id="backend">
                 <h4>John Elvis Arbaiza</h4>
@@ -60,6 +62,7 @@
                 <h4>Cristian Pineda</h4>
                 <a href="https://github.com/cristianpined4">Backend</a>
             </div>
+            <hr><hr><hr>
         </div>
     </div>
 @endsection

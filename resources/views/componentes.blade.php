@@ -8,9 +8,11 @@
 
 <div class="container">
 
-<h1>CASE Y GABINETES</h1>
+<h1>COMPONENTES</h1>
 
     <div class="Productscategoria">
+    <h2>CASE Y GABINETES</h2>
+    <span></span><span></span><span></span>
 
     <div class="itemsProduct">
            <div class="imgProducts">
@@ -109,12 +111,11 @@
             <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
             <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
     </div>
-   </div>
 
-   <h1>FUENTES DE PODER</h1>
-   <div class="Productscategoria">
+    <h2>FUENTES DE PODER</h2>
+    <span></span><span></span><span></span>
 
-<div class="itemsProduct">
+    <div class="itemsProduct">
        <div class="imgProducts">
             <img src="{{ asset('IMG/Products/fuente1.png') }}" alt="Componentes">
         </div>
@@ -124,9 +125,9 @@
         </div>
            <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
-</div>
+    </div>
 
-<div class="itemsProduct">
+    <div class="itemsProduct">
        <div class="imgProducts">
             <img src="{{ asset('IMG/Products/fuente2.png') }}" alt="Componentes">
         </div>
@@ -136,10 +137,72 @@
         </div>
         <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
         <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
-</div>
+    </div>
 
-</div>
+    <div class="itemsProduct">
+       <div class="imgProducts">
+            <img src="{{ asset('IMG/Products/fuente3.png') }}" alt="Componentes">
+        </div>
+        <div class="infoProducto">
+            <h5>FUENTE DE PODER FIVESTAR PS-10-600W BULK</h5>
+            <h6>$21.90</h6>
+        </div>
+        <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+        <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
+    </div>
 
+    <div class="itemsProduct">
+       <div class="imgProducts">
+            <img src="{{ asset('IMG/Products/fuente4.png') }}" alt="Componentes">
+        </div>
+        <div class="infoProducto">
+            <h5> FUENTE DE PODER EAGLE WARRIOR BLACK 600W PK600RSF001X</h5>
+            <h6>$39.00</h6>
+        </div>
+        <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+        <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
+      </div>
+
+   <h2>ENFRIAMIENTO</h2>
+    <span></span><span></span><span></span>
+
+    <div class="itemsProduct">
+            <div class="imgProducts">
+                <img src="{{ asset('IMG/Products/Disipador1.png') }}" alt="Componentes">
+             </div>
+             <div class="infoProducto">
+                 <h5>DISIPADOR DE AIRE ANTEC A400 RAINBOW INTEL AMD</h5>
+                  <h6>$49.95</h6>
+            </div>
+              <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+             <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
+        </div>
+
+    <div class="itemsProduct">
+            <div class="imgProducts">
+                <img src="{{ asset('IMG/Products/Disipador2.png') }}" alt="Componentes">
+             </div>
+             <div class="infoProducto">
+                 <h5>DISIPADOR DE AIRE ANTEC A400I RAINBOW PARA INTEL AMD</h5>
+                  <h6>$39.00</h6>
+            </div>
+              <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+             <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
+        </div>
+
+    <div class="itemsProduct">
+            <div class="imgProducts">
+                <img src="{{ asset('IMG/Products/Disipador3.png') }}" alt="Componentes">
+             </div>
+             <div class="infoProducto">
+                 <h5>DISIPADOR COOLER MASTER HYPER H410R RGB RR-H410-20PC-R1</h5>
+                  <h6>$45.00</h6>
+            </div>
+              <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+             <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
+        </div>
+
+    </div>
 </div>
 <br>
 

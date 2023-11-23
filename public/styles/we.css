@@ -12,12 +12,13 @@
     width: 50%;
     height: auto;
     background-color: black;
+    border-radius: 10px;
 }
 
 /* seccion de colaboradores*/
 
 .colaboradoresContenedor{
-    background-color: rgb(139, 91, 91);
+    background-color: #1b262c;
     color: white;
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
@@ -25,7 +26,7 @@
 
 .colaboradoresContenedor a{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 136, 0);
     font-weight: bold;
 }
 
