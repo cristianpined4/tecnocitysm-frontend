@@ -34,7 +34,8 @@
                     <li><a id="registrar" class="nav-link active text-light" aria-current="page" href="http://localhost:8001/register"><i class="fa-solid fa-mobile-screen-button"></i> Registrarse</a></li>
                     <li><a id="acceder" class="nav-link active text-light" aria-current="page" href="http://localhost:8001/login"><i class="fa-solid fa-arrow-right-from-bracket"></i> Acceder</a></li>
                     <li><a id="salir" class="nav-link active text-light d-none" aria-current="page" href="http://localhost:8001/"><i class="fa fa-sign-out"></i>Salir</a></li>
-                </ul>
+                    <li><a id="perfil" class="nav-link active text-light d-none" aria-current="page" href="http://localhost:8001/profile"><i class="fa fa-user-circle"></i> Mi Perfil</a></li>
+                  </ul>
            </div>
         </div>
     </nav>
