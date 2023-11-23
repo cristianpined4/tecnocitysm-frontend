@@ -1,4 +1,17 @@
 "use strict";
+const server = "http://localhost:8000/api";
+
+const encodeFileAsBase64URL = async (file) => {
+    return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.addEventListener("loadend", () => {
+            resolve(reader.result);
+        });
+        reader.readAsDataURL(file);
+    });
+};
+
+const volver = () => navigator.back();
 
 let url = `${server}/categorias`;
 
@@ -45,7 +58,10 @@ document
             .then((datos) => {
                 console.log(datos);
                 alert("Categoria guardada con éxito");
-                //window.location.href = "/categorias";
+                window.location.href = "http://localhost:8001/categoria";
             })
             .catch((error) => console.log(error));
     });
+document.getElementById("cancelar").addEventListener("click",()=>{
+    window.location.href="http://localhost:8001/categoria";
+});

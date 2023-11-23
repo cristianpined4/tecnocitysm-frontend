@@ -1,4 +1,4 @@
-@extends('layouts.navbar2')
+@extends('dashboard')
 
 @section('title', 'Crear Categoria')
 
@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{{ asset('styles/formCategorias.css') }}">
 @endsection
 
-@section('content')
+@section('contenido')
 <div class="container">
     <h2>Crear Categoria</h2>
     <form id="formCategorias" class="my-2">
@@ -31,12 +31,8 @@
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>
-        <button type="reset" class="btn btn-danger" onclick="volver">Cancelar</button>
+        <button id="cancelar" type="reset" class="btn btn-danger" onclick="category">Cancelar</button>
     </form>
 </div>
-@endsection
-
-@section('scripts')
 <script src="{{asset('js/formCategorias.js')}}"></script>
-
 @endsection

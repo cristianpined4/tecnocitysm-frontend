@@ -7,7 +7,7 @@
    <hr>
 
    <table class="table">
-       <thead class="table-dark">
+       <thead class="table-dark"> 
             <tr>
                <th>Nombre</th>
                <th>descripcion  </th>
@@ -17,7 +17,7 @@
             </tr>
 
        </thead>
-      <tbody>
+      <tbody id="categorias">
       <td></td>
         <td></td>
         <td></td>
@@ -29,7 +29,7 @@
 
       </tbody>
    </table>
-
+   <a href="http://localhost:8001/dashboard/categorias/formCategoria"><button type="submit" class="btn btn-success">Agregar</button></a>
 </div>
-
+<script src="{{asset('js/tabulacionCategoria.js')}}"></script>
 @endsection
