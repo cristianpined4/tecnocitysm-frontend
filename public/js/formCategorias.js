@@ -1,20 +1,23 @@
 "use strict";
 
-const url = `${server}/categorias`;
+let url = `${server}/categorias`;
 
 let id = window.location.pathname.split("/");
 id = id[id.length - 1];
-
-console.log(id);
+let isId = false;
 
 if (id) {
     fetch(`${url}/${id}`)
         .then((respuesta) => respuesta.json())
         .then((datos) => {
-            console.log(datos);
-            document.querySelector("#nombre").value = datos.nombre;
-            document.querySelector("#descripcion").value = datos.descripcion;
-            document.querySelector("#imagen").value = datos.imagen;
+            document.querySelector("#nombre").value = datos.categoria.nombre;
+            document.querySelector("#descripcion").value =
+                datos.categoria.descripcion;
+            document.querySelector("#status").value = datos.categoria.status;
+            document.querySelector("h2").textContent = "Editar Categoria";
+            document.title = "Editar Categoria";
+            isId = true;
+            url = `${url}/${datos.categoria.id}`;
         })
         .catch((error) => console.log(error));
 }
@@ -27,11 +30,11 @@ document
         let images = document.querySelector("#imagen").files;
         if (images.length > 0) {
             images = await encodeFileAsBase64URL(images[0]);
+            formData.append("imagen", images);
         }
-        formData.append("imagen", images);
         const token = localStorage.getItem("token").replaceAll('"', "");
         fetch(url, {
-            method: "POST",
+            method: isId ? "PUT" : "POST",
             body: JSON.stringify(Object.fromEntries(formData)),
             headers: {
                 "Content-Type": "application/json",

@@ -38,4 +38,5 @@
 
 @section('scripts')
 <script src="{{asset('js/formCategorias.js')}}"></script>
+
 @endsection
