@@ -114,19 +114,30 @@
     <h3> Ofertas Especiales</h3>
     <div class="ofertas">
            <div class="ofertas-img">
-           <img  src="{{ asset('IMG/productos.png') }}" alt="imagen">
+            <img  src="{{ asset('IMG/productos.png') }}" alt="imagen">
+            <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
+
            <div class="ofertas-img">
            <img src="{{ asset('IMG/Productos2.png') }}" alt="imagen">
+           <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
            <div class="ofertas-img">
            <img  src="{{ asset('IMG/Productos3.png') }}" alt="imagen">
+           <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
            <div class="ofertas-img">
              <img src="{{ asset('IMG/Imagen2.jpg') }}" alt="">
+             <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
            <div class="ofertas-img">
              <img src="{{ asset('IMG/Imagen3.png') }}" alt="">
+             <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
        </div>
        <hr>
@@ -135,18 +146,32 @@
        <div class="ventas">
            <div class="ventas-img">
            <img  src="{{ asset('IMG/productos.png') }}" alt="imagen">
+           <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
+
            <div class="ventas-img">
            <img src="{{ asset('IMG/Productos2.png') }}" alt="imagen">
+           <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
+
            <div class="ventas-img">
            <img  src="{{ asset('IMG/Productos3.png') }}" alt="imagen">
+           <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
+
            <div class="ventas-img">
              <img src="{{ asset('IMG/Imagen2.jpg') }}" alt="">
+             <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+            <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
+
            <div class="ventas-img">
              <img src="{{ asset('IMG/Imagen3.png') }}" alt="">
+             <button class="add-carrito"><i class="fa-solid fa-cart-shopping"></i> Agregar</button>
+             <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
         </div>
 

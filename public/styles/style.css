@@ -15,6 +15,7 @@ header>.opciones1{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    margin-right: 4px;
 }
 
 header>.opciones1> li {
@@ -32,6 +33,103 @@ header>.opciones1> li a {
 
 header>.opciones1> li a:hover {
     color: rgb(255, 60, 32);
+}
+
+.carretilla{
+    position: relative;
+    margin-left: 5px;
+}
+
+.carretilla-icon> i{
+    color: white;
+    font-size: 20px;
+}
+.count{
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.containerProducts{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #fff;
+    width: 550px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+
+.cardProduct{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 2px solid  rgba(0, 0, 0, 0.20);;
+}
+
+.productinfo-carrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.8;
+}
+
+.cantidad{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.ProductoCarInfo{
+    font-size: 18px;
+}
+
+.Precio{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 18px;
+}
+
+.cardProduct>i{
+    color: rgb(255, 136, 0);
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.total{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total> h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.totalPagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-card{
+    display: none;
+}
+
+.vacio{
+    padding: 20px;
+    text-align: center;
 }
 /*-----------------------------------------------------------------------------*/
 .navbar{
@@ -278,3 +376,51 @@ footer {
 
   @keyframes girar{0%{transform:scale(1) rotateZ(0)}50%{transform:scale(.5) rotateZ(180deg)}100%{transform:scale(1) rotateZ(360deg)}}
 
+    /*-----------------------------------------------------------------------------*/
+    /*Para el carrito y lista de deseos*/
+
+    .ofertas-img> button{
+        width: 100px;
+        height: 40px;
+        border-radius: 6px;
+        border: solid 2px rgb(238, 92, 25);
+        background-color: rgb(35, 47, 62);
+        margin: 6px;
+        color: white;
+    }
+
+
+    .ofertas-img> button:hover{
+        color:rgb(235, 101, 39) ;
+    }
+
+        .ventas-img> button{
+        width: 100px;
+        height: 40px;
+        border-radius: 6px;
+        border: solid 2px rgb(238, 92, 25);
+        background-color: rgb(35, 47, 62);
+        margin: 6px;
+        color: white;
+    }
+
+
+    .ventas-img> button:hover{
+        color:rgb(235, 101, 39) ;
+    }
+
+
+
+    .itemsProduct> button{
+        width: 100px;
+        height: 40px;
+        border-radius: 6px;
+        border: solid 2px rgb(238, 92, 25);
+        background-color: rgb(35, 47, 62);
+        margin: 6px;
+        color: white;
+    }
+
+    .itemsProduct> button:hover{
+        color:rgb(235, 101, 39) ;
+    }

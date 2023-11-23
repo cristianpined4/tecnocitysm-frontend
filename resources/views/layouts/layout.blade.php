@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('styles/style.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/Responsive.css') }}">
+    <script type="text/javascript" src="{{ asset('js/Carrito.js') }}" defer></script>
     <title>TecnoCitySM</title>
 </head>
 <body>
@@ -16,9 +17,40 @@
         <ul class="opciones1">
             <li><a href="http://localhost:8001/nosotros"><i class="fa-solid fa-users"></i></i> Nosotros</a></li>
             <li><a href=""><i class="fa-solid fa-headset"></i> Centro de ayuda</a></li>
-            <li><a href=""><i class="fa-solid fa-cart-shopping"></i> Ver carretilla</a></li>
             <li><a href=""><i class="fa-solid fa-money-bill"></i> Pagar</a></li>
         </ul>
+
+        <div class="carretilla" id="carretilla">
+
+            <div class="carretilla-icon" id="carretilla-icon">
+               <i class="fa-solid fa-cart-shopping"></i>
+               <div class="count">
+                  <span id="contadorProducts">0</span>
+                </div>
+            </div>
+
+            <div class="containerProducts hidden-card">
+                <div class="row-product">
+                  <div class="cardProduct">
+                      <div class="productinfo-carrito">
+                          <span class="cantidad"></span>
+                          <p class="ProductoCarInfo"></p>
+                          <span class="Precio"></span>
+                      </div>
+                    <i class="fa-solid fa-square-xmark"></i>
+                   </div>
+                </div>
+
+                <div class="total">
+                    <h4>Total:</h4>
+                    <span class="totalPagar">$0</span>
+                </div>
+            </div>
+
+        </div>
+
+
+
     </header>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -34,8 +66,7 @@
                     <li><a id="registrar" class="nav-link active text-light" aria-current="page" href="http://localhost:8001/register"><i class="fa-solid fa-mobile-screen-button"></i> Registrarse</a></li>
                     <li><a id="acceder" class="nav-link active text-light" aria-current="page" href="http://localhost:8001/login"><i class="fa-solid fa-arrow-right-from-bracket"></i> Acceder</a></li>
                     <li><a id="salir" class="nav-link active text-light d-none" aria-current="page" href="http://localhost:8001/"><i class="fa fa-sign-out"></i>Salir</a></li>
-                    <li><a id="perfil" class="nav-link active text-light d-none" aria-current="page" href="http://localhost:8001/profile"><i class="fa fa-user-circle"></i> Mi Perfil</a></li>
-                  </ul>
+                </ul>
            </div>
         </div>
     </nav>
@@ -46,7 +77,7 @@
             <i class="fa-solid fa-bars"> </i> Categoria
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Componentes</a></li>
+            <li><a class="dropdown-item" href="http://localhost:8001/componentes">Componentes</a></li>
             <li><a class="dropdown-item" href="#">Computo</a></li>
             <li><a class="dropdown-item" href="#">Gaming</a></li>
             <li><a class="dropdown-item" href="#">Audio y Sonido</a></li>

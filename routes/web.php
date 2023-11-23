@@ -11,6 +11,9 @@ use App\Http\Controllers\OfertasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProductsController;
+//--------------------------------------
+//para el carrito
+use App\Http\Controllers\ComponentesController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -57,3 +60,6 @@ Route::get('/formMarca',[FormMarcaController::class,'index']);
 Route::resource('oferta',OfertaController::class);
 Route::get('/profile', [UserController::class,'index'])->name('profile');
 Route::post('/update', [UserController::class,'update'])->name('actualizar');
+
+//Para el carrito
+Route::get('/componentes',[ComponentesController::class,'index']);
