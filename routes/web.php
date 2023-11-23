@@ -32,13 +32,13 @@ Route::get('/', function () {
     return view('inicio');
 });
 
-Route::get('/login',[LoginController::class,'index']);
+Route::get('/login', [LoginController::class, 'index']);
 
-Route::get('/register',[RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index']);
 
-Route::post('/registro', [LoginController::class,'index'])->name('registro');
+Route::post('/registro', [LoginController::class, 'index'])->name('registro');
 
-Route::get('/ofertas',[OfertasController::class,'index']);
+Route::get('/ofertas', [OfertasController::class, 'index']);
 
 Route::get('/inicio', function () {
     return view('inicio');
@@ -51,15 +51,20 @@ Route::get('/nosotros', function () {
     return view('nosotros');
 });
 
-Route::get('/dashboard',[DashBoardController::class,'index']);
-Route::resource('usuarios',UsuariosController::class);
-Route::resource('productos',ProductsController::class);
-Route::resource('categoria',CategoriaController::class);
-Route::resource('marcas',MarcaController::class);
-Route::get('/formMarca',[FormMarcaController::class,'index']);
-Route::resource('oferta',OfertaController::class);
-Route::get('/profile', [UserController::class,'index'])->name('profile');
-Route::post('/update', [UserController::class,'update'])->name('actualizar');
+Route::get('/dashboard', [DashBoardController::class, 'index']);
+Route::resource('usuarios', UsuariosController::class);
+Route::resource('productos', ProductsController::class);
+Route::resource('categoria', CategoriaController::class);
+Route::resource('marcas', MarcaController::class);
+Route::get('/formMarca', [FormMarcaController::class, 'index']);
+Route::resource('oferta', OfertaController::class);
+Route::get('/profile', [UserController::class, 'index'])->name('profile');
+Route::post('/update', [UserController::class, 'update'])->name('actualizar');
 
 //Para el carrito
-Route::get('/componentes',[ComponentesController::class,'index']);
+Route::get('/componentes', [ComponentesController::class, 'index']);
+
+// formulario de categoria
+Route::get('/dashboard/categorias/formCategoria', function () {
+    return view('Forms.formCategorias');
+});
