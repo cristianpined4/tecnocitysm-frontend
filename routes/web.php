@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MarcaController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\OfertasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ModeloController;
 //---------------------------------------
 //Para los formularios
 use App\Http\Controllers\FormMarcaController;
@@ -32,6 +34,7 @@ use Illuminate\Http\Request;
 |
 */
 
+
 Route::get('/', function () {
     return view('inicio');
 });
@@ -44,6 +47,7 @@ Route::post('/registro', [LoginController::class, 'index'])->name('registro');
 
 Route::get('/ofertas', [OfertasController::class, 'index']);
 
+Route::get('/brands', [BrandsController::class, 'index']);
 //-------------------------------------------------------------------------
 Route::get('/inicio', function () {
     return view('inicio');
@@ -63,6 +67,10 @@ Route::get('/ayuda', function () {
 
 Route::get('/news', function () {
     return view('news');
+});
+
+Route::get('/offices', function () {
+    return view('offices');
 });
 
 //-------------------------------------------------------------------------
@@ -93,11 +101,12 @@ Route::prefix('/dashboard')->group(function () {
         return view('Forms.FormUser');
     });
     Route::resource('/usuarios', UsuariosController::class);
+
+    Route::get('/dashboard/modelos', function () {
+        return view('Forms.FormModelo');
+    });
 });
 
-
-Route::get('/profile', [UserController::class, 'index'])->name('profile');
-Route::post('/update', [UserController::class, 'update'])->name('actualizar');
 
 //-------------------------------------------------------------------------------
 //Para el carrito-Categorias
