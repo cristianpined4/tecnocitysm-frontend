@@ -2,21 +2,39 @@ const registrar = document.getElementById("registrar");
 const acceder = document.getElementById("acceder");
 const salir = document.getElementById("salir");
 const perfil = document.getElementById("perfil");
+const closeSession = document.getElementById("closeSession");
+
 if(localStorage.getItem("token")){
-    registrar.classList.add("d-none");
-    acceder.classList.add("d-none");
-    salir.classList.remove("d-none");
-    perfil.classList.remove("d-none");
+    if(registrar){
+        registrar.classList.add("d-none");
+    }
+    if(acceder){
+        acceder.classList.add("d-none");
+    }
+    if(salir){
+        salir.classList.remove("d-none");
+    }
+    if(perfil){
+        perfil.classList.remove("d-none");
+    }
 }
 else{
-    registrar.classList.remove("d-none");
-    acceder.classList.remove("d-none");
-    salir.classList.add("d-none");
-    perfil.classList.add("d-none");
+    if(registrar){
+        registrar.classList.remove("d-none");
+    }
+    if(acceder){
+        acceder.classList.remove("d-none");
+    }
+    if(salir){
+        salir.classList.add("d-none");
+    }
+    if(perfil){
+        perfil.classList.add("d-none");
+    }
 }
 
-salir.addEventListener("click",()=>{
-    event.preventDefault();
+closeSession.addEventListener("click",(event)=>{
+    // event.preventDefault();
     let token = localStorage.getItem('token').slice(1, -1);
     console.log(token);
     const requestOptions = {
@@ -37,10 +55,8 @@ salir.addEventListener("click",()=>{
         .then(data => {
           // Manipular los datos de respuesta aquí
           console.log(data);
-          window.alert("Sesion cerrada")
           localStorage.removeItem("token");
           window.location.href="http://localhost:8001/";
-
         })
         .catch(error => {
           // Manejar errores de la solicitud

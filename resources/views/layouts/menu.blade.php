@@ -61,20 +61,42 @@
 
     <!--navbar horizontal-->
     <div class="menu-horizontal">
-            <div class="op">
-                <i class="fa-solid fa-user"></i>
-                <span>Admin</span>
-            </div>
+        <div class="op">
+            <i class="fa-solid fa-user"></i>
+            <span>Admin</span>
+        </div>
 
-            <div class="op">
-            <a href="" id="exit" type="button"><i class="fa-solid fa-right-from-bracket"></i></a>
-                <span>Salir</span>
-            </div>
+        <div class="op">
+            <a id="salir" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fa fa-sign-out">
+                    <span> Salir</span>
+                </i>
+            </a>
+        </div>
 
-            <div class="op">
-                <i class="fa-solid fa-house"></i>
-                <span>Home</span>
+        <div class="op">
+            <a href="{{route("inicio")}}" aria-current="page">
+                <i class="fa-solid fa-house">
+                    <span>Home</span>
+                </i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Seguro que deseas salir?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="closeSession">Cerrar sesión</button>
+                </div>
             </div>
+        </div>
     </div>
 
     <!--Contenidos-->
@@ -82,5 +104,6 @@
        @yield('contenido')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/actividad.js') }}"></script>
   </body>
 </html>
