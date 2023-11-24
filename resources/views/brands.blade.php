@@ -30,110 +30,110 @@
         <button class="boton boton-secundario">Limpiar</button>
     </div>
   </div>
-    </div> 
+    </div>
 
 
 
     <div class="Productscategoria">
     <div class="superior">
     <div class="titulo"><h2>Marcas</h2>
-    </div>    
+    </div>
     <div class="orden">
     <select class="select2">
         <option>Nombre (A-Z)</option>
         </select>
     </div>
-    
+
 </div>
     <div class="inferior">
         <div class="itemsProduct">
             <div class="imgProducts">
-                    <img src="{{ asset('IMG/marca1.png') }}" alt="marcas">
+                    <img src="{{ asset('IMG/Marcas/marca1.png') }}" alt="marcas">
                 </div>
                 <div class="infoProducto">
                 <h4>intel</h4>
-                
+
                 </div>
-                
+
         </div>
 
         <div class="itemsProduct">
             <div class="imgProducts">
-                    <img src="{{ asset('IMG/marca2.jpg') }}" alt="Componentes">
+                    <img src="{{ asset('IMG/Marcas/marca2.jpg') }}" alt="Componentes">
                 </div>
                 <div class="infoProducto">
                 <h4>Ryzen</h4>
-                
+
                 </div>
-                
+
         </div>
 
 
         <div class="itemsProduct">
             <div class="imgProducts">
-                    <img src="{{ asset('IMG/marca3.png') }}" alt="Componentes">
+                    <img src="{{ asset('IMG/Marcas/marca3.png') }}" alt="Componentes">
                 </div>
                 <div class="infoProducto">
                     <h4>Redragon</h4>
-                
+
                 </div>
-                
+
         </div>
 
 
         <div class="itemsProduct">
             <div class="imgProducts">
-                    <img src="{{ asset('IMG/marca2.jpg') }}" alt="Componentes">
+                    <img src="{{ asset('IMG/Marcas/marca2.jpg') }}" alt="Componentes">
                 </div>
                 <div class="infoProducto">
                     <h4>Ryzen</h4>
-                
+
                 </div>
-            
+
         </div>
 
         <div class="itemsProduct">
             <div class="imgProducts">
-                    <img src="{{ asset('IMG/marca5.jpg') }}" alt="Componentes">
+                    <img src="{{ asset('IMG/Marcas/marca5.jpg') }}" alt="Componentes">
                 </div>
                 <div class="infoProducto">
                     <h4>Asus</h4>
-                    
+
                 </div>
-            
+
         </div>
 
         <div class="itemsProduct">
             <div class="imgProducts">
-                    <img src="{{ asset('IMG/marca6.png') }}" alt="Componentes">
+                    <img src="{{ asset('IMG/Marcas/marca6.png') }}" alt="Componentes">
                 </div>
                 <div class="infoProducto">
                 <h4>Kingston</h4>
-                
+
                 </div>
-            
+
         </div>
 
         <div class="itemsProduct">
             <div class="imgProducts">
-                    <img src="{{ asset('IMG/marca7.jpg') }}" alt="Componentes">
+                    <img src="{{ asset('IMG/Marcas/marca7.jpg') }}" alt="Componentes">
                 </div>
                 <div class="infoProducto">
                     <h4>Acer</h4>
-                
+
                 </div>
-            
+
         </div>
 
         <div class="itemsProduct">
             <div class="imgProducts">
-                    <img src="{{ asset('IMG/marca1.png') }}" alt="Componentes">
+                    <img src="{{ asset('IMG/Marcas/marca1.png') }}" alt="Componentes">
                 </div>
                 <div class="infoProducto">
                     <h4>Intel</h4>
-                
+
                 </div>
-            
+
         </div>
 
     </div>

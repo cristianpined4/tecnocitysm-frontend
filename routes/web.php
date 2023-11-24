@@ -109,7 +109,6 @@ Route::post('/update', [UserController::class, 'update'])->name('actualizar');
 //Para el carrito-Categorias
 Route::get('/componentes', [ComponentesController::class, 'index']);
 Route::get('/computo', [ComputoController::class, 'index']);
-
 Route::get('/gaming', function () {
     return view('Categorias.gaming');
 });
@@ -119,6 +118,16 @@ Route::get('/audio', function () {
 Route::get('/moviles', function () {
     return view('Categorias.moviles');
 });
+Route::get('/impresoras',function(){
+    return view('Categorias.impresoras');
+});
+Route::get('/electronica',function(){
+    return view('Categorias.electronica');
+});
+Route::get('/monitores',function(){
+    return view('Categorias.monitores');
+});
+//---------------------------------------------------------------------------------------
 Route::get('/modelos', function () {
     return view('Forms.FormModelo');
 });
