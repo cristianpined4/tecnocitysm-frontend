@@ -1,64 +1,64 @@
 @extends('layouts.navbar2')
 
+@section('title', 'Crear Marca')
+
+@section('css')
+<style>
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        background-color: #fff;
+        display: block;
+        width: minmax(300px, 70%);
+        margin: 2rem auto;
+    }
+
+    .container h2 {
+        margin-bottom: 1rem;
+    }
+
+    .my-2 {
+        margin: 1rem 0;
+    }
+</style>
+@endsection
+
 @section('content')
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('styles/marcas.css')}}">
-    <main>
-        <div class="row">
-            <div class="col-md-3 col"></div>
-            <div class="col-4">
-                <div class="card shadow-lg rounded opacity-75 estiloPropio mt-5 bg-light" style="width: 43rem">
-                <div class="card-title center text-center">
-                        <h3>Crear Marca</h3>
-                    </div>
-                    <div class="card-body">
-                        <form action="{{ route('marcas.store')}}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <div class="form-group col- d-none">
-                                <label for="id"></label>
-                                <input type="text" name="id" class="form-control custom-input" id="id" placeholder="id">
-                            </div>
-                            <div class="form-group">
-                                <label for="nombre"></label>
-                                <input type="text" name="nombre" class="form-control custom-input" id="nombre" placeholder="Nombre">
-                            </div>
-                            <div class="form-group">
-                                <label for="descripcion">Descripcion</label>
-                                <input type="text" name="descripcion" class="form-control custom-input" id="descripcion" placeholder="Descripcion">
-                            </div>
-                            <div class="form-group">
-                                <label for="imagen">Imagen</label>
-                                <input type="file" accept=".jpg, .jpeg, .png" name="imagen" class="form-control custom-input" id="imagen" placeholder="Imagen">
-                            </div>
-                            <div class="form-group">
-                                <label for="estatus">Estatus</label>
-                                <select name="estatus" id="estatus">
-                                    <option value="1">Activo</option>
-                                   <option value="0">Inactivo</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="idcategoria">Categoria</label>
-                                <select name="idcategoria" id="idcategoria">
-                                </select>
-                            </div>
-                            <div class="row">
-                                <div class="col-auto">
-                                    <button type="submit" class="btn btn-primary mt-3">Guardar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-4"></div>
+<div class="container card p-3">
+    <h2>Crear Marca</h2>
+    <form id="formMarcas" class="my-2">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Nombre" class="form-control" id="nombre">
         </div>
-    </main>
+        <div class="form-group my-2">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" name="descripcion" placeholder="Descripcion" class="form-control" id="descripcion">
+        </div>
+        <div class="form-group my-2">
+            <label for="imagen">Imagen</label><br>
+            <input type="file" name="imagen" placeholder="Imagen" class="form-control-file my-2" id="imagen"
+                accept="image/*">
+        </div>
+        <div class="form-group my-2">
+            <label for="status">Estatus</label>
+            <select name="status" id="status" class="form-control">
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button id="cancelar" type="reset" class="btn btn-danger" onclick="volver()">Cancelar</button>
+    </form>
 
-    <script src="{{asset('js/opciones.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <div class="d-flex justify-content-center my-3" id="imagenEdit">
+    </div>
+</div>
 
+@endsection
 
+@section('scripts')
+<script src="{{asset('js/page-marcas.js')}}"></script>
 @endsection

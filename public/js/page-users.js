@@ -3,21 +3,23 @@
 let url = `${server}/usuarios`;
 
 const deleteUser = async (id) => {
-    let headers = {
-        "Content-Type": "application/json",
-        Authorization:
-            "Bearer " + localStorage.getItem("token").replace(/['"]+/g, ""),
-    };
-    const response = await fetch(url + "/" + id, {
-        method: "DELETE",
-        headers: headers,
-    });
-    const data = await response.json();
-    if (data.success) {
-        alert(data.message);
-        getUsers();
-    } else {
-        alert(data.message);
+    if (confirm("¿Estas seguro de eliminar este usuario?")) {
+        let headers = {
+            "Content-Type": "application/json",
+            Authorization:
+                "Bearer " + localStorage.getItem("token").replace(/['"]+/g, ""),
+        };
+        const response = await fetch(url + "/" + id, {
+            method: "DELETE",
+            headers: headers,
+        });
+        const data = await response.json();
+        if (data.success) {
+            alert(data.message);
+            getUsers();
+        } else {
+            alert(data.message);
+        }
     }
 };
 
@@ -81,7 +83,7 @@ if (formUser != null) {
     id = id[id.length - 1];
     let isId = false;
 
-    if (id) {
+    if (id && id != "&nuevo&") {
         fetch(`${url}/${id}`, {
             method: "GET",
             headers: {
@@ -93,25 +95,27 @@ if (formUser != null) {
         })
             .then((respuesta) => respuesta.json())
             .then((datos) => {
-                let [nombre, apellido] = datos.user.name.split(" ");
-                document.querySelector("#nombre").value = nombre;
-                document.querySelector("#apellido").value = apellido
-                    ? apellido
-                    : "";
-                document.querySelector("#email").value = datos.user.email;
-                document.querySelector("#rol_id").value = datos.user.rol.id;
-                document.querySelector("#status").value = datos.user.status;
-                document.querySelector("h1").textContent = "Editar Usuario";
-                document.title = "Editar Usuario";
-                isId = true;
-                url = `${url}/${datos.user.id}`;
-                if (datos.user.images.length > 0) {
-                    let img = document.createElement("img");
-                    img.src = datos.user.images[0].url;
-                    img.style.width = "80%";
-                    document
-                        .querySelector("#imagenEdit")
-                        .insertAdjacentElement("afterend", img);
+                if (datos.success) {
+                    let [nombre, apellido] = datos.user.name.split(" ");
+                    document.querySelector("#nombre").value = nombre;
+                    document.querySelector("#apellido").value = apellido
+                        ? apellido
+                        : "";
+                    document.querySelector("#email").value = datos.user.email;
+                    document.querySelector("#rol_id").value = datos.user.rol.id;
+                    document.querySelector("#status").value = datos.user.status;
+                    document.querySelector("h1").textContent = "Editar Usuario";
+                    document.title = "Editar Usuario";
+                    isId = true;
+                    url = `${url}/${datos.user.id}`;
+                    if (datos.user.images.length > 0) {
+                        let img = document.createElement("img");
+                        img.src = datos.user.images[0].url;
+                        img.style.width = "80%";
+                        document
+                            .querySelector("#imagenEdit")
+                            .insertAdjacentElement("afterend", img);
+                    }
                 }
             })
             .catch((error) => console.log(error));
@@ -138,7 +142,10 @@ if (formUser != null) {
         let images = document.querySelector("#imagen").files;
         if (images.length > 0) {
             images = await encodeFileAsBase64URL(images[0]);
+            formData.delete("imagen");
             formData.append("imagen", images);
+        } else {
+            formData.delete("imagen");
         }
         const token = localStorage.getItem("token").replaceAll('"', "");
         fetch(url, {

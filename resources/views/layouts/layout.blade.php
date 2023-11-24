@@ -94,9 +94,9 @@
             <li><a class="dropdown-item" href="http://localhost:8001/gaming">Gaming</a></li>
             <li><a class="dropdown-item" href="http://localhost:8001/audio">Audio y Sonido</a></li>
             <li><a class="dropdown-item" href="http://localhost:8001/moviles">Moviles</a></li>
-            <li><a class="dropdown-item" href="#">Impresoras</a></li>
-            <li><a class="dropdown-item" href="#">Electrónica</a></li>
-            <li><a class="dropdown-item" href="#">Monitores</a></li>
+            <li><a class="dropdown-item" href="http://localhost:8001/impresoras">Impresoras</a></li>
+            <li><a class="dropdown-item" href="http://localhost:8001/electronica">Electrónica</a></li>
+            <li><a class="dropdown-item" href="http://localhost:8001/monitores">Monitores</a></li>
           </ul>
         </li>
 
@@ -106,7 +106,7 @@
         <li><a href="http://localhost:8001/brands"><i class="fa-solid fa-tag"></i> Marcas</a></li>
         <li><a href="http://localhost:8001/ofertas"><i class="fa-brands fa-shopify"></i> Ofertas</a></li>
         <li><a href="http://localhost:8001/news"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
-        <li><a href=""><i class="fa-solid fa-store"></i> Tiendas</a></li>
+        <li><a href="http://localhost:8001/offices"><i class="fa-solid fa-store"></i> Tiendas</a></li>
      </ul>
     </div>
 

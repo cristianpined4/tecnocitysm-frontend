@@ -1,70 +1,80 @@
 "use strict";
 const tabulación = document.getElementById("categorias");
 const server = "http://localhost:8000/api";
-let url = `${server}/categorias/get-categorias`;
+let url = `${server}/categorias`;
 tabulación.innerHTML = ``;
 async function realizarPeticion() {
     try {
-        const respuesta = await fetch(url);
+        const respuesta = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${localStorage
+                    .getItem("token")
+                    .replaceAll('"', "")}`,
+            },
+        });
         const datos = await respuesta.json();
-
-        datos.categorias.forEach(element => {
-            tabulación.innerHTML += `<td>${element.nombre}</td>
+        let fragmento = "";
+        datos.categorias.forEach((element) => {
+            fragmento += `<tr class="align-middle">
+            <td>${element.nombre}</td>
                 <td>${element.descripcion}</td>
-                <td><img src="" alt="categoria"></td>
-                <td>${element.status}</td>
+                <td><img src="${
+                    element.images.length > 0
+                        ? element.images[0].url
+                        : "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg"
+                }" alt="categoria" width="50" height="50" class="rounded-circle"></td>
+                <td>${
+                    element.status == "activo"
+                        ? `<span class="badge bg-success">Activo</span>`
+                        : `<span class="badge bg-danger">Inactivo</span>`
+                }</td>
                 <td>
-                    <button type="submit" class="btn btn-danger" id="eliminar" name="${element.slug}">Eliminar</button>
-                    <button type="submit" class="btn btn-success" id="actualizar" name="${element.slug}">Actualizar</button>
-                </td>`;
+                    <a href="/dashboard/categorias/${
+                        element.slug
+                    }" class="btn btn-warning">Editar</a>
+                    <button type="button" class="btn btn-danger" id="eliminar" name="${
+                        element.id
+                    }">Eliminar</button>
+                </td>
+                </tr>`;
         });
-
-        // Coloca aquí el código que deseas ejecutar después de completar la petición fetch.
-        console.log("La petición fetch ha sido completada.");
-        const arrayEditar = document.querySelectorAll("#actualizar");
-        arrayEditar.forEach(element => {
-            element.addEventListener("click",()=>{
-                window.location.href="http://localhost:8001/dashboard/categorias/formCategoria/"+element.getAttribute("name");
-            });
-        });
-        const arrayEliminar = document.querySelectorAll("#eliminar");
-        arrayEliminar.forEach(element => {
-            element.addEventListener("click",()=>{
-                const token = localStorage.getItem("token").replaceAll('"', "");
-                let url = "http://localhost:8000/api/categorias/"+element.getAttribute("name");
-                fetch("http://localhost:8000/api/categorias/"+element.getAttribute("name"))
-                .then((respuesta) => respuesta.json())
-                .then((datos) => {
-                    fetch("http://localhost:8000/api/categorias/"+datos.categoria.id, {
-                        method: 'DELETE',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            Authorization: "Bearer " + token,
-                        },
-                    })
-                    .then(respuesta => {
-                        if (respuesta.ok) {
-                            window.alert("Categoria Eliminada con exito");
-                            // Puedes realizar acciones adicionales después de eliminar el elemento.
-                            window.location.href="http://localhost:8001/categoria";
-                        } else {
-                            window.alert("No se pudo completar la accion");
-                        }
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    });
-                })
-                .catch((error) => console.log(error));
-                
-            });
-        });
-
+        tabulación.innerHTML = fragmento;
     } catch (error) {
         console.log(error);
     }
 }
-
 // Llama a la función para iniciar la ejecución.
 realizarPeticion();
 
+document.addEventListener("click", async (e) => {
+    if (e.target.id == "eliminar") {
+        let valida = confirm("¿Está seguro de eliminar la categoría?");
+        if (valida == false) {
+            return;
+        }
+        try {
+            const token = localStorage.getItem("token").replaceAll('"', "");
+            const respuesta = await fetch(
+                `${server}/categorias/${e.target.name}`,
+                {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            const datos = await respuesta.json();
+            if (datos.success == true) {
+                alert(datos.message);
+                realizarPeticion();
+            } else {
+                alert(datos.message);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+});

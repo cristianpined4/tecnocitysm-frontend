@@ -53,59 +53,67 @@
 <hr>
     <div class="slider-marcas">
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca1.png') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca1.png') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca2.jpg') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca2.jpg') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca3.png') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca3.png') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca4.png') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca4.png') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca5.jpg') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca5.jpg') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca6.png') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca6.png') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca7.jpg') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca7.jpg') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca1.png') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca8.png') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca2.jpg') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca1.png') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca3.png') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca2.jpg') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca4.png') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca3.png') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca5.jpg') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca4.png') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca6.png') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca5.jpg') }}" alt="imagen">
         </div>
 
         <div class="slide2">
-           <img  src="{{ asset('IMG/marca7.jpg') }}" alt="imagen">
+           <img  src="{{ asset('IMG/Marcas/marca6.png') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/Marcas/marca7.jpg') }}" alt="imagen">
+        </div>
+
+        <div class="slide2">
+           <img  src="{{ asset('IMG/Marcas/marca8.png') }}" alt="imagen">
         </div>
     </div>
     <hr>
