@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MarcaController;
@@ -43,6 +44,8 @@ Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/registro', [LoginController::class, 'index'])->name('registro');
 
 Route::get('/ofertas', [OfertasController::class, 'index']);
+
+Route::get('/brands', [BrandsController::class, 'index']);
 
 //-------------------------------------------------------------------------
 Route::get('/inicio', function () {

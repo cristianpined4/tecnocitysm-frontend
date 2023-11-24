@@ -1,0 +1,258 @@
+*::after,
+*::before,
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .container{
+    background-color: red;
+    width: 100%;
+    height: auto;
+    
+} */
+
+.izquierdo{
+    width: 300px;
+    height: 700px;
+    background-color: white;
+    padding-top: 0px;
+}
+
+.card {
+    width: 230px;
+    margin: 0 auto;
+ 
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border: none;
+    }
+    
+    /* .marca {
+    text-decoration: underline red;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    }
+
+    .texto{
+        border-radius: 5px;
+    } */
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    /* .marca {
+        font-size: 18px;
+        color: black;
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        text-decoration: underline red;
+    } */
+
+    .marca {
+        font-size: 18px;
+        color: black;
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .marca::after {
+        content: '';
+        position: absolute;
+        top: 70%; /* Ajusta la posición del subrayado */
+        left: 0;
+        width: 50%; /* Ajusta la longitud del subrayado */
+        height: 2px;
+        background-color: red; /* Color del subrayado */
+        transition: width 0.3s ease;
+    }
+
+    .marca:hover::after {
+        width: 100%;
+    }
+    /* .marca:hover::after {
+        width: 100%;
+    } */
+    
+
+    .texto {
+        display: none;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    #flecha {
+        margin-left: 5px;
+        transition: transform 0.3s;
+        display: inline-block;
+        
+    }
+
+    /* Rotamos la flecha para que apunte hacia abajo */
+    .texto-visible #flecha {
+        transform: rotate(90deg);
+    }
+    /*botones*/
+    .botones {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+
+    .boton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 30px;
+        margin: 5px;
+    }
+    
+    .boton-secundario {
+        background-color: #dd2b18;
+        color: #fff;
+    }
+
+    .boton-secundario:hover{
+        border: solid #dd2b18;
+        color: black;
+        background-color: white;
+    }
+
+    
+    
+   
+
+/* .superior{
+    background-color: aqua;
+} */
+body{
+    margin: 0 auto;
+   
+}
+
+h1{
+    margin-top: 2rem;
+    color: rgb(35, 47, 62);
+}
+h2{
+    color: rgb(35, 47, 62);
+}
+
+.Productscategoria{
+    max-width: 96.5%; /* o cualquier otro valor que desees */
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+    /* grid-template-columns: repeat(4,1fr);
+    gap: 45px;
+    margin-top: 3rem; */
+}
+.superior{
+    height: 200px;
+   
+}
+
+.titulo{
+    background-color: white;
+    height: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   padding-top: 50px;
+}
+
+.orden{
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 45px;
+}
+
+.select2 {
+    width: 145px;
+    height: 50px;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    display: flex;
+    /* justify-content: center;
+    align-content: center; */
+    align-items: center;
+    
+  }
+
+  h4{
+    padding-left: 55px;
+    padding-top: 30px;
+  }
+.inferior{
+    max-width: 100%; /* o cualquier otro valor que desees */
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 45px;
+    margin-top: 3rem;
+}
+.imgProducts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;;
+}
+
+.imgProducts> img{
+    /* width: 14rem;
+    height: 14rem; */
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+    transition: all .5s;
+}
+
+.imgProducts> img:hover{
+    transform: scale(1.1);
+}
+
+.infoProducto{
+    height: 8rem;
+}
+
+.infoProducto>h5{
+    margin-left: 14px;
+    font-size: 18px;
+}
+.infoProducto>h6{
+    color: rgb(238, 92, 25);
+    font-weight: bold;
+    margin-left: 14px;
+}
+
+.itemsProduct{
+    width: 184px;
+    border-radius: 10px;
+}
+
+.itemsProduct:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
