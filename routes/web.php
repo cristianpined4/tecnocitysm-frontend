@@ -84,4 +84,8 @@ Route::get('/dashboard/usuarios/{id}', function () {
     return view('Forms.FormUser');
 });
 
+Route::get('/news', function () {
+    return view('news');
+})->name('news');
+
 Route::resource('/dashboard/usuarios', UsuariosController::class);
