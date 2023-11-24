@@ -132,6 +132,16 @@ const showHTML = () =>{
              }
         });
 
+
+        let total = document.createElement('div');
+        total.classList.add('total');
+
+        total.innerHTML = `
+            <h4>Total: </h4>
+            <span class="totalPagar">$${totalCarrito}</span>`
+
+        rowProduct.appendChild(total);
+
         //Parte que se encarga de llevar la cuenta del carrito
         valorTotal.innerHTML = `$${totalCarrito}`;
         contadorProduct.innerText = totalProductos;
