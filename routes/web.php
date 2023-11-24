@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MarcaController;
@@ -10,6 +10,7 @@ use App\Http\Controllers\OfertasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ModeloController;
 //---------------------------------------
 //Para los formularios
 use App\Http\Controllers\FormMarcaController;
@@ -93,6 +94,10 @@ Route::prefix('/dashboard')->group(function () {
         return view('Forms.FormUser');
     });
     Route::resource('/usuarios', UsuariosController::class);
+    Route::get('/modelo', [ModeloController::class, 'index'])->name('modelo.index');
+    Route::get('/modelos', function () {
+        return view('Forms.FormModelo');
+    });
 });
 
 
@@ -112,5 +117,12 @@ Route::get('/audio', function () {
 });
 Route::get('/moviles', function () {
     return view('Categorias.moviles');
+});
+Route::get('/modelos', function () {
+    return view('Forms.FormModelo');
+});
+Route::get('/brands', [BrandsController::class, 'index']);
+Route::get('/offices',function(){
+    return view('offices');
 });
 //-------------------------------------------------------------------------------
