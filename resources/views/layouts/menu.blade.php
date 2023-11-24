@@ -51,7 +51,10 @@
                <i class="fa-solid fa-tag"></i>
                <span class="opcion"><a href="{{ route('marcas.index')}}"> Marcas </a></span>
             </div>
-
+            <div>
+               <i class="fa-solid fa-tag"></i>
+               <span class="opcion"><a href="{{ route('modelo.index')}}"> Modelos </a></span>
+            </div>
             <div>
                 <i class="fa-brands fa-shopify"></i>
                 <span class="opcion"><a href="{{ route('oferta.index')}}">Ofertas</a></span>
