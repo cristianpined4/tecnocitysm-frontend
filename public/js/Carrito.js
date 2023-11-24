@@ -83,23 +83,30 @@ rowProduct.addEventListener('click', (e) =>{
 const showHTML = () =>{
 
     console.log(allproducts.length);
-    if(!allproducts.length){
+    console.log(allproducts.length);
+    console.log(allproducts.length);
+    console.log(allproducts.length);
+    if(allproducts.length === 0){
         contenedorProductos.innerHTML = `
             <p class ="vacio">El carrito esta vacio</p>
             `
-    }
+        localStorage.removeItem('carrito');
+        contadorProduct.innerText = '0';
+    }else{
+        console.log("Creando el html");
 
-    //Limpiando el html
-    rowProduct.innerHTML = '';
-    //Variables para el total
-    let totalCarrito = 0;
-    let totalProductos = 0;
+        //Limpiando el html
+        rowProduct.innerHTML = '';
+        //Variables para el total
+        let totalCarrito = 0;
+        let totalProductos = 0;
 
-    allproducts.forEach(product =>{
-        const contenedorProductos = document.createElement('div');
-        contenedorProductos.classList.add('cardProduct');
+        allproducts.forEach(product =>{
+            console.log(allproducts.length === 1 ? 'si' : 'no');
+            const contenedorProductoss = document.createElement('div');
+            contenedorProductoss.classList.add('cardProduct');
 
-        contenedorProductos.innerHTML = `
+            contenedorProductoss.innerHTML = `
             <div class="productinfo-carrito">
             <span class="cantidad">${product.quantity}</span>
             <p class="ProductoCarInfo">${product.title}</p>
@@ -107,24 +114,28 @@ const showHTML = () =>{
            </div>
            <i class="fa-solid fa-square-xmark"></i>
             `
-        rowProduct.append(contenedorProductos);
-        console.log(allproducts);
-        localStorage.setItem('carrito', JSON.stringify(allproducts));
+            rowProduct.append(contenedorProductoss);
+            contenedorProductos.innerHTML = '';
+            contenedorProductos.appendChild(rowProduct);
+            console.log(allproducts);
+            localStorage.setItem('carrito', JSON.stringify(allproducts));
 
-        //Operacion para la los totale
-        totalCarrito = totalCarrito + parseInt(product.quantity * product.price.slice(1));
-        totalProductos = totalProductos + product.quantity;
+            //Operacion para la los totale
+            totalCarrito = totalCarrito + parseInt(product.quantity * product.price.slice(1));
+            totalProductos = totalProductos + product.quantity;
 
-        if(!allproducts.length){
-            contenedorProductos.innerHTML = `
-               <p class ="vacio">El carrito esta vacio</p>
-               `
-        }
-    });
+             if(allproducts.length === 0){
+                 console.log("Esta vacio");
+                 contenedorProductoss.innerHTML = `
+                    <p class ="vacio">El carrito esta vacio</p>
+                    `
+             }
+        });
 
-    //Parte que se encarga de llevar la cuenta del carrito
-    valorTotal.innerHTML = `$${totalCarrito}`;
-    contadorProduct.innerText = totalProductos;
+        //Parte que se encarga de llevar la cuenta del carrito
+        valorTotal.innerHTML = `$${totalCarrito}`;
+        contadorProduct.innerText = totalProductos;
+    }
 }
 
 
