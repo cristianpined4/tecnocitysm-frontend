@@ -120,17 +120,15 @@
                 </div>
                 <div class="infoProducto">
                     <h4>Acer</h4>
-
                 </div>
-
         </div>
 
         <div class="itemsProduct">
             <div class="imgProducts">
-                    <img src="{{ asset('IMG/Marcas/marca1.png') }}" alt="Componentes">
+                    <img src="{{ asset('IMG/Marcas/marca10.png') }}" alt="Componentes">
                 </div>
                 <div class="infoProducto">
-                    <h4>Intel</h4>
+                    <h4>Nintendo</h4>
 
                 </div>
 

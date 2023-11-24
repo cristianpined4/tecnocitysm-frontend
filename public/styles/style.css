@@ -235,6 +235,7 @@ footer {
     margin-top: 20px;
     width: 44rem;
     margin-left: 6rem;
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.76);
 }
 
 .slide img{
@@ -256,8 +257,9 @@ footer {
 
 .productos .product{
     padding: 6px;
-    height: 9rem;
+    height: 9.2rem;
     width: 20rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
 /*-----------------------------------------------------------------------------*/
 /*Parte donde se muestra info*/
@@ -302,7 +304,7 @@ footer {
   display: flex;
   animation: scroll 60s linear infinite;
   -webkit-animation: scroll 40s linear infinite;
-  width:calc(200px*14) ;
+  width:calc(200px*15) ;
 }
 
 .container3 .slide2{
@@ -340,9 +342,14 @@ footer {
     margin: 1rem;
   }
 
+  .ofertas .ofertas-img:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 6px;
+  }
+
   .ofertas .ofertas-img img{
     width: 16rem;
-    height: 10rem;
+    height: 14rem;
   }
 
   .ventas{
@@ -354,9 +361,14 @@ footer {
     margin: 1rem;
   }
 
+  .ventas .ventas-img:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 6px;
+  }
+
   .ventas .ventas-img img{
     width: 16rem;
-    height: 10rem;
+    height: 14rem;
   }
 
   @keyframes scroll{
@@ -370,7 +382,7 @@ footer {
     100%{
         opacity: 0px;
         -webkit-transform: translateX(calc(-200px *7));
-        transform: translateX(calc(-200px *7));
+        transform: translateX(calc(-200px *8));
     }
   }
 

@@ -103,7 +103,7 @@
         </ul>
      <ul class="Opciones2">
         <li><a href="{{route('inicio')}}"><i class="fa-solid fa-house"></i> Inicio</a></li>
-        <li><a href="http://localhost:8001/brands"><i class="fa-solid fa-tag"></i> Marcas</a></li>
+        <li><a href="http://localhost:8001/brands"><i class="fa-brands fa-laravel"></i> Marcas</a></li>
         <li><a href="http://localhost:8001/ofertas"><i class="fa-brands fa-shopify"></i> Ofertas</a></li>
         <li><a href="http://localhost:8001/news"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
         <li><a href="http://localhost:8001/offices"><i class="fa-solid fa-store"></i> Tiendas</a></li>
@@ -115,7 +115,7 @@
 
     <!--Parte del footer de Inicio,Login,Registro-->
     <footer>
-     <h3>TecnoCitySM</h3>
+     <h3>Copyright © 2023 TecnoCitySM</h3>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -1,7 +1,7 @@
 *::after,
 *::before,
 
-*{ 
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +11,7 @@
     background-color: red;
     width: 100%;
     height: auto;
-    
+
 } */
 
 .izquierdo{
@@ -24,18 +24,18 @@
 .card {
     width: 230px;
     margin: 0 auto;
- 
+
     padding-left: 10px;
     padding-bottom: 10px;
     padding-right: 10px;
     border: none;
     }
-    
+
     /* .marca {
     text-decoration: underline red;
     font-size: 20px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+
     }
 
     .texto{
@@ -85,7 +85,7 @@
     /* .marca:hover::after {
         width: 100%;
     } */
-    
+
 
     .texto {
         display: none;
@@ -101,7 +101,7 @@
         margin-left: 5px;
         transition: transform 0.3s;
         display: inline-block;
-        
+
     }
 
     /* Rotamos la flecha para que apunte hacia abajo */
@@ -115,7 +115,7 @@
         text-align: center;
         padding-top: 30px;
     }
-    
+
 
     .boton {
         padding: 10px 20px;
@@ -125,7 +125,7 @@
         border-radius: 30px;
         margin: 5px;
     }
-    
+
     .boton-secundario {
         background-color: #dd2b18;
         color: #fff;
@@ -137,16 +137,16 @@
         background-color: white;
     }
 
-    
-    
-   
+
+
+
 
 /* .superior{
     background-color: aqua;
 } */
 body{
     margin: 0 auto;
-   
+
 }
 
 h1{
@@ -159,18 +159,18 @@ h2{
 
 .Productscategoria{
     max-width: 96.5%; /* o cualquier otro valor que desees */
-    margin: 0 auto; 
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     background-color: white;
-    
+
     /* grid-template-columns: repeat(4,1fr);
     gap: 45px;
     margin-top: 3rem; */
 }
 .superior{
     height: 200px;
-   
+
 }
 
 .titulo{
@@ -199,7 +199,7 @@ h2{
     /* justify-content: center;
     align-content: center; */
     align-items: center;
-    
+
   }
 
   h4{
@@ -208,7 +208,7 @@ h2{
   }
 .inferior{
     max-width: 100%; /* o cualquier otro valor que desees */
-    margin: 0 auto; 
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 45px;
@@ -218,13 +218,13 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;;
+    overflow: hidden;
 }
 
 .imgProducts> img{
-    /* width: 14rem;
-    height: 14rem; */
-    max-width: 50%;
+     width: 10rem;
+    height: 10rem;
+
     height: auto;
     object-fit: cover;
     transition: all .5s;
@@ -251,6 +251,7 @@ h2{
 .itemsProduct{
     width: 184px;
     border-radius: 10px;
+    height: 16rem;
 }
 
 .itemsProduct:hover{
