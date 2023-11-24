@@ -24,6 +24,10 @@
     grid-template-columns: 33.33% 33.33% 33.33%;
 }
 
+.colaboradoresContenedor h1{
+    color: white;
+}
+
 .colaboradoresContenedor a{
     text-decoration: none;
     color: rgb(255, 136, 0);

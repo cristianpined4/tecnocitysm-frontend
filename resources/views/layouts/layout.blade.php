@@ -16,7 +16,7 @@
     <header>
         <ul class="opciones1">
             <li><a href="http://localhost:8001/nosotros"><i class="fa-solid fa-users"></i></i> Nosotros</a></li>
-            <li><a href=""><i class="fa-solid fa-headset"></i> Centro de ayuda</a></li>
+            <li><a href="http://localhost:8001/ayuda"><i class="fa-solid fa-headset"></i> Centro de ayuda</a></li>
             <li><a href=""><i class="fa-solid fa-money-bill"></i> Pagar</a></li>
         </ul>
 
@@ -89,15 +89,14 @@
             <i class="fa-solid fa-bars"> </i> Categoria
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="http://localhost:8001/componentes">Componentes</a></li>
-            <li><a class="dropdown-item" href="#">Computo</a></li>
-            <li><a class="dropdown-item" href="#">Gaming</a></li>
+          <li><a class="dropdown-item" href="http://localhost:8001/componentes">Componentes</a></li>
+            <li><a class="dropdown-item" href="http://localhost:8001/computo">Computo</a></li>
+            <li><a class="dropdown-item" href="http://localhost:8001/gaming">Gaming</a></li>
             <li><a class="dropdown-item" href="#">Audio y Sonido</a></li>
             <li><a class="dropdown-item" href="#">Moviles</a></li>
             <li><a class="dropdown-item" href="#">Impresoras</a></li>
             <li><a class="dropdown-item" href="#">Electrónica</a></li>
-            <li><a class="dropdown-item" href="#">Oficina</a></li>
-            <li><a class="dropdown-item" href="#">Más</a></li>
+            <li><a class="dropdown-item" href="#">Monitores</a></li>
           </ul>
         </li>
 
@@ -106,8 +105,7 @@
         <li><a href="{{route('inicio')}}"><i class="fa-solid fa-house"></i> Inicio</a></li>
         <li><a href=""><i class="fa-solid fa-tag"></i> Marcas</a></li>
         <li><a href="http://localhost:8001/ofertas"><i class="fa-brands fa-shopify"></i> Ofertas</a></li>
-        <li><a href=""><i class="fa-solid fa-plus"></i> Nuevos productos</a></li>
-        <li><a href="{{route("news")}}"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
+        <li><a href="http://localhost:8001/news"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
         <li><a href=""><i class="fa-solid fa-store"></i> Tiendas</a></li>
      </ul>
     </div>

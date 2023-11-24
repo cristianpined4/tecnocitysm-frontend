@@ -12,11 +12,11 @@ use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProductsController;
 //---------------------------------------
 //Para los formularios
-
 use App\Http\Controllers\FormMarcaController;
 //--------------------------------------
 //para el carrito
 use App\Http\Controllers\ComponentesController;
+use App\Http\Controllers\ComputoController;
 //--------------------------------------
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -44,6 +44,7 @@ Route::post('/registro', [LoginController::class, 'index'])->name('registro');
 
 Route::get('/ofertas', [OfertasController::class, 'index']);
 
+//-------------------------------------------------------------------------
 Route::get('/inicio', function () {
     return view('inicio');
 })->name("inicio");
@@ -51,9 +52,20 @@ Route::get('/inicio', function () {
 Route::post('/inicio', function () {
     return view('inicio');
 })->name("traslado");
+
 Route::get('/nosotros', function () {
     return view('nosotros');
 });
+
+Route::get('/ayuda',function(){
+    return view('ayuda');
+});
+
+Route::get('/news',function(){
+    return view('news');
+});
+
+//-------------------------------------------------------------------------
 
 Route::get('/dashboard', [DashBoardController::class, 'index']);
 Route::resource('productos', ProductsController::class);
@@ -64,8 +76,14 @@ Route::resource('oferta', OfertaController::class);
 Route::get('/profile', [UserController::class, 'index'])->name('profile');
 Route::post('/update', [UserController::class, 'update'])->name('actualizar');
 
-//Para el carrito
+//-------------------------------------------------------------------------------
+//Para el carrito-Categorias
 Route::get('/componentes', [ComponentesController::class, 'index']);
+Route::get('/computo', [ComputoController::class, 'index']);
+Route::get('/gaming',function(){
+    return view('Categorias.gaming');
+});
+//-------------------------------------------------------------------------------
 
 // formulario de categoria
 Route::get('/dashboard/categorias/formCategoria', function () {
@@ -83,9 +101,5 @@ Route::get('/dashboard/usuarios/nuevo', function () {
 Route::get('/dashboard/usuarios/{id}', function () {
     return view('Forms.FormUser');
 });
-
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
 
 Route::resource('/dashboard/usuarios', UsuariosController::class);
