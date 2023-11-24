@@ -56,7 +56,6 @@ Route::get('/nosotros', function () {
 });
 
 Route::get('/dashboard', [DashBoardController::class, 'index']);
-Route::resource('usuarios', UsuariosController::class);
 Route::resource('productos', ProductsController::class);
 Route::resource('categoria', CategoriaController::class);
 Route::resource('marcas', MarcaController::class);
@@ -73,11 +72,16 @@ Route::get('/dashboard/categorias/formCategoria', function () {
     return view('Forms.formCategorias');
 });
 
-//Formulario usuarios
-Route::get('/dashboard/usuarios/FormUser', function () {
-    return view('Forms.FormUser');
-});
-
 Route::get('/dashboard/categorias/formCategoria/{id}', function () {
     return view('Forms.formCategorias');
 });
+
+Route::get('/dashboard/usuarios/nuevo', function () {
+    return view('Forms.FormUser');
+})->name('usuarios.create');
+
+Route::get('/dashboard/usuarios/{id}', function () {
+    return view('Forms.FormUser');
+});
+
+Route::resource('/dashboard/usuarios', UsuariosController::class);

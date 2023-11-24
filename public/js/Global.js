@@ -12,4 +12,6 @@ const encodeFileAsBase64URL = async (file) => {
     });
 };
 
-const volver = () => navigator.back();
+const volver = () => {
+    window.history.back();
+};

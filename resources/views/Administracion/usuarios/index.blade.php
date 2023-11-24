@@ -12,7 +12,10 @@
     crossorigin="anonymous"></script>
 
 <div class="container-user">
-    <h1>Usuarios del sistema</h1>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Usuarios del sistema</h1>
+        <a href="{{ route('usuarios.create') }}" class="btn btn-primary">Nuevo usuario</a>
+    </div>
     <hr>
 
     <table class="table" id="table-user">
@@ -22,7 +25,8 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Correo</th>
-                <th>rol</th>
+                <th>Rol</th>
+                <th>Estado</th>
                 <th>Opciones</th>
             </tr>
 

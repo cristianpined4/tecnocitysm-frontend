@@ -31,6 +31,14 @@ if (id) {
             document.title = "Editar Categoria";
             isId = true;
             url = `${url}/${datos.categoria.id}`;
+            if (datos.categoria.images.length > 0) {
+                let img = document.createElement("img");
+                img.src = datos.categoria.images[0].url;
+                img.style.width = "80%";
+                document
+                    .querySelector("#imagenEdit")
+                    .insertAdjacentElement("afterend", img);
+            }
         })
         .catch((error) => console.log(error));
 }
@@ -62,6 +70,6 @@ document
             })
             .catch((error) => console.log(error));
     });
-document.getElementById("cancelar").addEventListener("click",()=>{
-    window.location.href="http://localhost:8001/categoria";
+document.getElementById("cancelar").addEventListener("click", () => {
+    window.location.href = "http://localhost:8001/categoria";
 });

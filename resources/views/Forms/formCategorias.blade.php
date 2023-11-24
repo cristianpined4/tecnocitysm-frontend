@@ -31,8 +31,11 @@
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>
-        <button id="cancelar" type="reset" class="btn btn-danger" onclick="category">Cancelar</button>
+        <button id="cancelar" type="reset" class="btn btn-danger" onclick="volver()">Cancelar</button>
     </form>
+
+    <div class="d-flex justify-content-center my-3" id="imagenEdit">
+    </div>
 </div>
 <script src="{{asset('js/formCategorias.js')}}"></script>
 @endsection

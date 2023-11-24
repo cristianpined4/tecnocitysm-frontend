@@ -15,7 +15,7 @@
 
     <header>
         <ul class="opciones1">
-            <li><button onclick="volver">Regresar</button></li>
+            <li><button onclick="volver()">Regresar</button></li>
         </ul>
     </header>
 
@@ -25,7 +25,6 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="{{asset('js/Global.js')}}"></script>
-
     @yield('scripts')
 </body>
 
