@@ -4,7 +4,7 @@
 {{-- Agregamos un section para poder trabajar con layout --}}
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('styles/categorias.css') }}">
+
 
 <div class="container">
 

@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\CategoriaController;
-use App\Http\Controllers\FormMarcaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\OfertaController;
@@ -11,9 +10,14 @@ use App\Http\Controllers\OfertasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProductsController;
+//---------------------------------------
+//Para los formularios
+
+use App\Http\Controllers\FormMarcaController;
 //--------------------------------------
 //para el carrito
 use App\Http\Controllers\ComponentesController;
+//--------------------------------------
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -67,6 +71,11 @@ Route::get('/componentes', [ComponentesController::class, 'index']);
 // formulario de categoria
 Route::get('/dashboard/categorias/formCategoria', function () {
     return view('Forms.formCategorias');
+});
+
+//Formulario usuarios
+Route::get('/dashboard/usuarios/FormUser', function () {
+    return view('Forms.FormUser');
 });
 
 Route::get('/dashboard/categorias/formCategoria/{id}', function () {

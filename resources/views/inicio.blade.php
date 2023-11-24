@@ -112,6 +112,7 @@
     <br>
 
     <h3> Ofertas Especiales</h3>
+    <div  class="Productscategoria">
     <div class="ofertas">
            <div class="ofertas-img">
             <img  src="{{ asset('IMG/productos.png') }}" alt="imagen">
@@ -140,9 +141,11 @@
             <button><i class="fa-solid fa-bookmark"></i> Guardar</button>
            </div>
        </div>
+       </div>
        <hr>
 
        <h3>Más Vendido</h3>
+       <div  class="Productscategoria">
        <div class="ventas">
            <div class="ventas-img">
            <img  src="{{ asset('IMG/productos.png') }}" alt="imagen">
@@ -175,6 +178,7 @@
            </div>
         </div>
 
+       </div>
        </div>
        <br>
 

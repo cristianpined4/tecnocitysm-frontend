@@ -36,10 +36,7 @@
       </tbody>
    </table>
 
-
-
-
-
+<a href="http://localhost:8001/dashboard/usuarios/FormUser"><button type="submit" class="btn btn-success">Agregar</button></a>
 
 </div>
 
