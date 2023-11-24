@@ -12,7 +12,6 @@
     <title>TecnoCitySM</title>
 </head>
 <body>
-           <!--Parte del header y navbar de Inicio,Login,Registro-->
     <header>
         <ul class="opciones1">
             <li><a href="http://localhost:8001/nosotros"><i class="fa-solid fa-users"></i></i> Nosotros</a></li>
@@ -21,7 +20,6 @@
         </ul>
 
         <div class="carretilla" id="carretilla">
-
             <div class="carretilla-icon" id="carretilla-icon">
                <i class="fa-solid fa-cart-shopping"></i>
                <div class="count">
@@ -40,17 +38,12 @@
                     <i class="fa-solid fa-square-xmark"></i>
                    </div>
                 </div>
-
                 <div class="total">
                     <h4>Total:</h4>
                     <span class="totalPagar">$0</span>
                 </div>
             </div>
-
         </div>
-
-
-
     </header>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -63,14 +56,30 @@
                <button class="busqueda btn btn-outline-secondary text-light" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
            </form>
                <ul class="navbar-nav">
-               <ul class="navbar-nav">
                     <li><a id="registrar" class="nav-link active text-light" aria-current="page" href="http://localhost:8001/register"><i class="fa-solid fa-mobile-screen-button"></i> Registrarse</a></li>
                     <li><a id="acceder" class="nav-link active text-light" aria-current="page" href="http://localhost:8001/login"><i class="fa-solid fa-arrow-right-from-bracket"></i> Acceder</a></li>
-                    <li><a id="salir" class="nav-link active text-light d-none" aria-current="page" href="http://localhost:8001/"><i class="fa fa-sign-out"></i>Salir</a></li>
+                    <li><a id="salir" class="nav-link active text-light d-none" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-sign-out"></i>Salir</a></li>
                     <li><a id="perfil" class="nav-link active text-light d-none" aria-current="page" href="http://localhost:8001/profile"><i class="fa fa-user-circle"></i> Mi Perfil</a></li>
                 </ul>
            </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Seguro que deseas salir?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="closeSession">Cerrar sesión</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </nav>
     <div class="Categorias">
         <ul class="op">

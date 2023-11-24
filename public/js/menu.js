@@ -34,8 +34,8 @@ barrasMenu.addEventListener('click', () =>{
     });
 
 
-const salir = document.getElementById("exit");
-salir.addEventListener("click",()=>{
+const closeSession = document.getElementById("closeSession");
+closeSession.addEventListener("click",(event)=>{
     event.preventDefault();
     let token = localStorage.getItem('token').slice(1, -1);
     console.log(token);
@@ -45,7 +45,7 @@ salir.addEventListener("click",()=>{
           'Authorization': `Bearer ${token}`
         }
       };
-      
+
       // Realizar la solicitud Fetch
       fetch('http://localhost:8000/api/auth/logout', requestOptions)
         .then(response => {
@@ -60,7 +60,7 @@ salir.addEventListener("click",()=>{
           window.alert("Sesion cerrada")
           localStorage.removeItem("token");
           window.location.href="http://localhost:8001/";
-          
+
         })
         .catch(error => {
           // Manejar errores de la solicitud
