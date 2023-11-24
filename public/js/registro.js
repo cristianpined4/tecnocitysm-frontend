@@ -74,8 +74,8 @@ registro.addEventListener("click", () =>{
                 // Solo almacenar el token si la solicitud fue exitosa
                 localStorage.removeItem("token")
                 localStorage.setItem("token", JSON.stringify(data.access_token));
-                window.alert("registrado");
-                window.location.href="http://localhost:8001/inicio"
+                localStorage.setItem("id", '2');
+                window.location.href="http://localhost:8001/inicio";
             } else {
                 window.alert("El correo ya se encuentra en existencia, intente con uno diferente");
                 console.log("Error en la solicitud:", data.message);
