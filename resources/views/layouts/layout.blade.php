@@ -107,7 +107,7 @@
         <li><a href=""><i class="fa-solid fa-tag"></i> Marcas</a></li>
         <li><a href="http://localhost:8001/ofertas"><i class="fa-brands fa-shopify"></i> Ofertas</a></li>
         <li><a href=""><i class="fa-solid fa-plus"></i> Nuevos productos</a></li>
-        <li><a href=""><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
+        <li><a href="{{route("news")}}"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
         <li><a href=""><i class="fa-solid fa-store"></i> Tiendas</a></li>
      </ul>
     </div>
