@@ -80,8 +80,15 @@ Route::post('/update', [UserController::class, 'update'])->name('actualizar');
 //Para el carrito-Categorias
 Route::get('/componentes', [ComponentesController::class, 'index']);
 Route::get('/computo', [ComputoController::class, 'index']);
+
 Route::get('/gaming',function(){
     return view('Categorias.gaming');
+});
+Route::get('/audio',function(){
+    return view('Categorias.audio');
+});
+Route::get('/moviles',function(){
+    return view('Categorias.moviles');
 });
 //-------------------------------------------------------------------------------
 
