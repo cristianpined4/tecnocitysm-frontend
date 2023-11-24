@@ -57,22 +57,45 @@ Route::get('/nosotros', function () {
     return view('nosotros');
 });
 
-Route::get('/ayuda',function(){
+Route::get('/ayuda', function () {
     return view('ayuda');
 });
 
-Route::get('/news',function(){
+Route::get('/news', function () {
     return view('news');
 });
 
 //-------------------------------------------------------------------------
 
-Route::get('/dashboard', [DashBoardController::class, 'index']);
-Route::resource('productos', ProductsController::class);
-Route::resource('categoria', CategoriaController::class);
-Route::resource('marcas', MarcaController::class);
-Route::get('/formMarca', [FormMarcaController::class, 'index']);
-Route::resource('oferta', OfertaController::class);
+Route::prefix('/dashboard')->group(function () {
+    Route::get('/', [DashBoardController::class, 'index'])->name('dashboard');
+
+    Route::get('/productos', [ProductsController::class, 'index'])->name('productos.index');
+
+    Route::get('/marcas', [MarcaController::class, 'index'])->name('marcas.index');
+    Route::get('/marcas/&nueva&', [FormMarcaController::class, 'index'])->name('marcas.create');
+    Route::get('/marcas/{slug}', [FormMarcaController::class, 'index']);
+
+    Route::resource('oferta', OfertaController::class);
+
+    Route::get('/categorias', [CategoriaController::class, 'index'])->name('categoria.index');
+    Route::get('/categorias/&nueva&', function () {
+        return view('Forms.formCategorias');
+    })->name('categorias.create');
+    Route::get('/categorias/{id}', function () {
+        return view('Forms.formCategorias');
+    });
+    Route::get('/usuarios/&nuevo&', function () {
+        return view('Forms.FormUser');
+    })->name('usuarios.create');
+
+    Route::get('/usuarios/{id}', function () {
+        return view('Forms.FormUser');
+    });
+    Route::resource('/usuarios', UsuariosController::class);
+});
+
+
 Route::get('/profile', [UserController::class, 'index'])->name('profile');
 Route::post('/update', [UserController::class, 'update'])->name('actualizar');
 
@@ -81,32 +104,13 @@ Route::post('/update', [UserController::class, 'update'])->name('actualizar');
 Route::get('/componentes', [ComponentesController::class, 'index']);
 Route::get('/computo', [ComputoController::class, 'index']);
 
-Route::get('/gaming',function(){
+Route::get('/gaming', function () {
     return view('Categorias.gaming');
 });
-Route::get('/audio',function(){
+Route::get('/audio', function () {
     return view('Categorias.audio');
 });
-Route::get('/moviles',function(){
+Route::get('/moviles', function () {
     return view('Categorias.moviles');
 });
 //-------------------------------------------------------------------------------
-
-// formulario de categoria
-Route::get('/dashboard/categorias/formCategoria', function () {
-    return view('Forms.formCategorias');
-});
-
-Route::get('/dashboard/categorias/formCategoria/{id}', function () {
-    return view('Forms.formCategorias');
-});
-
-Route::get('/dashboard/usuarios/nuevo', function () {
-    return view('Forms.FormUser');
-})->name('usuarios.create');
-
-Route::get('/dashboard/usuarios/{id}', function () {
-    return view('Forms.FormUser');
-});
-
-Route::resource('/dashboard/usuarios', UsuariosController::class);

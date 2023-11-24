@@ -3,38 +3,26 @@
 @section('contenido')
 
 <div class="">
-    <div class="cabezera">
-       <h1> Marcas </h1>
-       <button type="submit" class="btn btn-info"><a href="http://localhost:8001/formMarca">Agregar</a></button>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Marcas</h1>
+        <a href="{{route('marcas.create')}}" class="btn btn-primary">Nueva Marca</a>
     </div>
-   <hr>
+    <hr>
 
-   <table class="table">
-       <thead class="table-dark">
+    <table class="table" id="tablaMarca">
+        <thead class="table-dark">
             <tr>
-               <th>Id Categoria</th>
-               <th>Nombre</th>
-               <th>descripcion</th>
-               <th>Imagen</th>
-               <th>Estatus</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Imagen</th>
+                <th>Estatus</th>
                 <th>Opciones</th>
             </tr>
-
-       </thead>
-      <tbody>
-      <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-            <button type="submit" class="btn btn-danger">Eliminar</button>
-            <button type="submit" class="btn btn-success">Actualizar</button>
-        </td>
-
-      </tbody>
-   </table>
-
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 </div>
-
+<script src="{{ asset('js/Global.js') }}"></script>
+<script src="{{asset('js/page-marcas.js')}}"></script>
 @endsection
