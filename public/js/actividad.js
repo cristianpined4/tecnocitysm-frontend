@@ -55,7 +55,7 @@ closeSession.addEventListener("click",(event)=>{
         .then(data => {
           // Manipular los datos de respuesta aquí
           console.log(data);
-          localStorage.removeItem("token");
+          localStorage.clear();
           window.location.href="http://localhost:8001/";
         })
         .catch(error => {

@@ -25,6 +25,7 @@ if (localStorage.getItem('token') !== null) {
           window.location.href="http://localhost:8001/dashboard";
         }
         else{
+            localStorage.setItem("id", '2');
           window.location.href="http://localhost:8001/inicio";
         }
 
@@ -50,11 +51,11 @@ if (localStorage.getItem('token') !== null) {
               localStorage.setItem("token", JSON.stringify(jsonresponse.access_token));
               const rolId = jsonresponse.current_user.rol_id;
               if(rolId ===1){
-                window.alert("accediendo como administrador");
+                  localStorage.setItem("id", '1');
                 window.location.href="http://localhost:8001/dashboard"
               }
               else{
-                window.alert("Accediendo como usuario registrado");
+                  localStorage.setItem("id", '2');
                 window.location.href="http://localhost:8001/"
               }
           })
