@@ -20,19 +20,10 @@
             </tr>
 
        </thead>
-      <tbody>
-      <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-            <button type="submit" class="btn btn-danger">Eliminar</button>
-            <button type="submit" class="btn btn-success">Actualizar</button>
-        </td>
-
+      <tbody id="modelos">
       </tbody>
    </table>
 
 </div>
-
+<script src="{{asset('js/tabulacionModelos.js')}}"></script>
 @endsection

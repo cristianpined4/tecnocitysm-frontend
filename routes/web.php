@@ -101,6 +101,9 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/modelos', function () {
         return view('Forms.FormModelo');
     });
+    Route::get('/modelos/{id}', function () {
+        return view('Forms.FormModelo');
+    });
 });
 
 
