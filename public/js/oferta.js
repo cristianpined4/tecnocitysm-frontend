@@ -1,43 +1,95 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const toggleButton = document.getElementById("toggleButton");
-    const togglePrice = document.getElementById("togglePrice");
+    const marca = document.getElementById("toggleButton");
     const inputTexto = document.querySelector(".texto");
-    const dollarCounter = document.getElementById("dollarCounter");
-    const progressInput = document.getElementById("progressInput");
 
-    // Inicialmente, ocultar el input de texto, el contador y la barra de progreso
-    inputTexto.style.display = "none";
-    dollarCounter.style.display = "none";
-    progressInput.style.display = "none";
+    marca.addEventListener("click", function() {
+        // Alternar la clase para cambiar la apariencia de la flecha
+        marca.classList.toggle("texto-visible");
 
-    toggleButton.addEventListener("click", function() {
-        // Mostrar u ocultar el input de texto al hacer clic en "Nombre Marca"
+        // Alternar la visibilidad del input
         inputTexto.style.display = inputTexto.style.display === "none" ? "block" : "none";
-
-        // No ocultar el contador y la barra de progreso al hacer clic en "Nombre Marca"
-    });
-
-    togglePrice.addEventListener("click", function() {
-        // Mostrar u ocultar el contador y la barra de progreso al hacer clic en "Precio"
-        dollarCounter.style.display = dollarCounter.style.display === "none" ? "inline" : "none";
-        progressInput.style.display = progressInput.style.display === "none" ? "inline" : "none";
-
-        // No ocultar el input de texto al hacer clic en "Precio"
-        // Deja que ambos elementos se muestren al mismo tiempo
     });
 });
 
-// Obtenemos el elemento de la barra de progreso y el contador en dólares
-const progressInput = document.getElementById('progressInput');
-const dollarCounter = document.getElementById('dollarCounter');
 
-// Define el rango máximo que desees, por ejemplo, 100
-const maxRange = 100;
 
-// Agrega un evento para actualizar el contador cuando cambia la barra de progreso
-progressInput.addEventListener('input', () => {
-    // Actualiza el valor del contador en dólares
-    const dollarValue = (progressInput.value / 100) * maxRange; // Ajusta el rango máximo según tus necesidades
-    dollarCounter.textContent = `$${dollarValue.toFixed(2)}`;
+// ordenar por filtro
+
+document.addEventListener('DOMContentLoaded', function () {
+    var selectElement = document.querySelector('.select2');
+    var productos = document.querySelectorAll('.itemsProduct');
+
+    selectElement.addEventListener('change', function () {
+        var selectedOption = this.value;
+
+        if (selectedOption === 'Nombre (A-Z)') {
+            ordenarPorNombreAscendente(productos);
+        } else if (selectedOption === 'Nombre (Z-A)') {
+            ordenarPorNombreDescendente(productos);
+        } else if (selectedOption === 'Mayor Precio') {
+            ordenarPorPrecioDescendente(productos);
+        } else if (selectedOption === 'Menor Precio') {
+            ordenarPorPrecioAscendente(productos);
+        }
+    });
+
+    function ordenarPorNombreAscendente(productos) {
+        var productosArray = Array.from(productos);
+
+        productosArray.sort(function (a, b) {
+            var nombreA = a.querySelector('.infoProducto p').textContent.toLowerCase();
+            var nombreB = b.querySelector('.infoProducto p').textContent.toLowerCase();
+            return nombreA.localeCompare(nombreB);
+        });
+
+        limpiarYAgregar(productosArray);
+    }
+
+    function ordenarPorNombreDescendente(productos) {
+        var productosArray = Array.from(productos);
+
+        productosArray.sort(function (a, b) {
+            var nombreA = a.querySelector('.infoProducto p').textContent.toLowerCase();
+            var nombreB = b.querySelector('.infoProducto p').textContent.toLowerCase();
+            return nombreB.localeCompare(nombreA);
+        });
+
+        limpiarYAgregar(productosArray);
+    }
+
+    function ordenarPorPrecioDescendente(productos) {
+        var productosArray = Array.from(productos);
+
+        productosArray.sort(function (a, b) {
+            var precioA = parseFloat(a.querySelector('.precios .precios1').textContent.replace('$', '').replace(',', ''));
+            var precioB = parseFloat(b.querySelector('.precios .precios1').textContent.replace('$', '').replace(',', ''));
+            return precioB - precioA;
+        });
+
+        limpiarYAgregar(productosArray);
+    }
+
+    function ordenarPorPrecioAscendente(productos) {
+        var productosArray = Array.from(productos);
+
+        productosArray.sort(function (a, b) {
+            var precioA = parseFloat(a.querySelector('.precios .precios1').textContent.replace('$', '').replace(',', ''));
+            var precioB = parseFloat(b.querySelector('.precios .precios1').textContent.replace('$', '').replace(',', ''));
+            return precioA - precioB;
+        });
+
+        limpiarYAgregar(productosArray);
+    }
+
+    function limpiarYAgregar(productosArray) {
+        var contenedorProductos = document.querySelector('.Productscategoria .inferior');
+
+        // Limpiamos el contenedor
+        contenedorProductos.innerHTML = '';
+
+        // Agregamos los productos ordenados
+        productosArray.forEach(function (producto) {
+            contenedorProductos.appendChild(producto);
+        });
+    }
 });
-

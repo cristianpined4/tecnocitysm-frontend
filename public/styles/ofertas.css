@@ -5,24 +5,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.izquierdo{
-    width: 300px;
-    height: 700px;
-    background-color: white;
-    padding-top: 0px;
-}
-
-.card {
-    width: 230px;
-    margin: 0 auto;
     
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    border: none;
-    }
+}
+
+
+
 
     .contenedor {
         display: flex;
@@ -30,78 +17,11 @@
         align-items: flex-start; /* Alinea los elementos a la izquierda */
     }
 
-    .marca {
-        font-size: 18px;
-        color: black;
-        margin-bottom: 10px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-
-    .marca::after {
-        content: '';
-        position: absolute;
-        top: 70%; /* Ajusta la posición del subrayado */
-        left: 0;
-        width: 50%; /* Ajusta la longitud del subrayado */
-        height: 2px;
-        background-color: red; /* Color del subrayado */
-        transition: width 0.3s ease;
-    }
-
-    .marca:hover::after {
-        width: 100%;
-    }
-
-    .texto {
-        display: none;
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        width: 200px;
-        margin-top: 10px;
-    }
-
     #flecha {
         margin-left: 5px;
         transition: transform 0.3s;
         display: inline-block;
         
-    }
-
-    /* Rotamos la flecha para que apunte hacia abajo */
-    .texto-visible #flecha {
-        transform: rotate(90deg);
-    }
-    /*botones*/
-    .botones {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-top: 30px;
-    }
-
-    .boton {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        border: none;
-        border-radius: 30px;
-        margin: 5px;
-    }
-    
-    .boton-secundario {
-        background-color: #dd2b18;
-        color: #fff;
-    }
-
-    .boton-secundario:hover{
-        border: solid #dd2b18;
-        color: black;
-        background-color: white;
     }
 
 body{
@@ -162,12 +82,14 @@ h2{
     padding-top: 30px;
   }
 .inferior{
+    
     max-width: 100%; /* o cualquier otro valor que desees */
     margin: 0 auto; 
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 45px;
     margin-top: 1rem;
+    
 }
 .imgProducts{
     display: flex;
@@ -204,6 +126,7 @@ h2{
 }
 
 .itemsProduct{
+  
     width: 200px;
     border-radius: 10px;
 }
@@ -290,7 +213,18 @@ color: red;
         width: 100%;
     }
     
-    
+    /* form */
+    .botones {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 30px;
+    }
 
+    .Productscategoria .inferior {
+        align-items: flex-start;
+    }
     
-    
+    .izquierdo{
+        width: 100px;
+    }
