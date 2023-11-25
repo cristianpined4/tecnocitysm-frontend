@@ -97,10 +97,10 @@ Route::prefix('/dashboard')->group(function () {
         return view('Forms.FormUser');
     });
     Route::resource('/usuarios', UsuariosController::class);
-    Route::get('/modelo', [ModeloController::class, 'index'])->name('modelo.index');
-    Route::get('/modelos', function () {
+    Route::get('/modelos', [ModeloController::class, 'index'])->name('modelo.index');
+    Route::get('/modelos/&nueva&', function () {
         return view('Forms.FormModelo');
-    });
+    })->name('modelos.create');
     Route::get('/modelos/{id}', function () {
         return view('Forms.FormModelo');
     });
@@ -123,13 +123,13 @@ Route::get('/audio', function () {
 Route::get('/moviles', function () {
     return view('Categorias.moviles');
 });
-Route::get('/impresoras',function(){
+Route::get('/impresoras', function () {
     return view('Categorias.impresoras');
 });
-Route::get('/electronica',function(){
+Route::get('/electronica', function () {
     return view('Categorias.electronica');
 });
-Route::get('/monitores',function(){
+Route::get('/monitores', function () {
     return view('Categorias.monitores');
 });
 //---------------------------------------------------------------------------------------

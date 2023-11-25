@@ -16,20 +16,15 @@ async function realizarPeticion() {
         });
         const datos = await respuesta.json();
         let fragmento = "";
-        console.log(datos);
         datos.modelos.forEach((element) => {
             fragmento += `<tr class="align-middle">
             <td>${element.nombre}</td>
                 <td>${element.descripcion}</td>
-                <td>${element.id_categoria}</td>
-                <td>${element.id_marca}</td>
+                <td>${element.categoria.nombre}</td>
+                <td>${element.marca.nombre}</td>
                 <td>
-                    <a href="/dashboard/modelos/${
-                        element.id
-                    }" class="btn btn-warning">Editar</a>
-                    <button type="button" class="btn btn-danger" id="eliminar" name="${
-                        element.id
-                    }">Eliminar</button>
+                    <a href="/dashboard/modelos/${element.id}" class="btn btn-warning">Editar</a>
+                    <button type="button" class="btn btn-danger" id="eliminar" name="${element.id}">Eliminar</button>
                 </td>
                 </tr>`;
         });

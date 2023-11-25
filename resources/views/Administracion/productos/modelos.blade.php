@@ -3,26 +3,26 @@
 @section('contenido')
 
 <div class="">
-    <div class="cabezera">
-       <h1> MODELOS </h1>
-       <button type="submit" class="btn btn-info"><a href="/dashboard/modelos">Agregar</a></button>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1> MODELOS </h1>
+        <a href="{{route('modelos.create')}}" class="btn btn-primary">Nuevo Modelo</a>
     </div>
-   <hr>
+    <hr>
 
-   <table class="table">
-       <thead class="table-dark">
+    <table class="table">
+        <thead class="table-dark">
             <tr>
-               <th>Nombre</th>
-               <th>Descripcion</th>
-               <th>ID Categoria</th>
-               <th>ID Marca</th>
-               <th>Opciones</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Categoria</th>
+                <th>Marca</th>
+                <th>Opciones</th>
             </tr>
 
-       </thead>
-      <tbody id="modelos">
-      </tbody>
-   </table>
+        </thead>
+        <tbody id="modelos">
+        </tbody>
+    </table>
 
 </div>
 <script src="{{asset('js/tabulacionModelos.js')}}"></script>
