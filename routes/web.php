@@ -75,6 +75,12 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/', [DashBoardController::class, 'index'])->name('dashboard');
 
     Route::get('/productos', [ProductsController::class, 'index'])->name('productos.index');
+    Route::get('/productos/&nuevo&', function () {
+        return view('Forms.FormProducto');
+    })->name('productos.create');
+    Route::get('/productos/{id}', function () {
+        return view('Forms.FormProducto');
+    });
 
     Route::get('/marcas', [MarcaController::class, 'index'])->name('marcas.index');
     Route::get('/marcas/&nueva&', [FormMarcaController::class, 'index'])->name('marcas.create');

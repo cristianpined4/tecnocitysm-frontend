@@ -21,6 +21,9 @@
 
         </thead>
         <tbody id="categorias">
+            <td colspan="5">
+                <h3 class="text-center text-muted">Cargando...</h3>
+            </td>
         </tbody>
     </table>
 </div>
